@@ -25,7 +25,7 @@ Route::prefix('admin')->group(function(){
       Route::any('/logout/', 'Auth\AdminLoginController@logout')->name('admin.logout');
     });
     
-    Route::prefix('dashboard')->middleware('auth:admin')->group(function(){
+    Route::prefix('dashboard')->group(function(){
        Route::get('/', 'Admin\Controller@dashboard')->name('admin.dashboard'); 
         
         //Blog Resource

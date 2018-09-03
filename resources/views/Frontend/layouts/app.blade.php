@@ -7,8 +7,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Apex Triangle </title>
+        <title>Apex Triangle - A Software Development Agency </title>
         <meta name="description" content="Apex Triangle , if you can dream it we can build it.">
+        <meta name="copyright" content="Apex Trangle is a registered trademark og Apex Trangle Co.">
+        <meta name="keywords" content="web development agency, nigerian web development agency, build websites and mobile apps, software development agency, build mobile apps, build websites with php, build websites with javascript, Build a better website, Cloud computing consultants, biometrics website, it training">
+        <meta name="title" content="web/mobile development agency,">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <link rel="shortcut icon" href="{{asset('img//logo/57x57.png')}}">

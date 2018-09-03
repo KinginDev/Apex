@@ -26,8 +26,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-        $categories  = Category::all();
-       return view('admin.pages.blog.index')->with(compact(['categories']));
+    //     $categories  = Category::all();
+       return view('admin.pages.blog.create');
     }
 
     /**
@@ -38,7 +38,30 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request->hasFile('images')){
+            foreach ($request->images as $value) {
+               echo ($value);
+            }
+        }else{
+            throw new  Exception("Error Processing Request", 1);
+            
+        }
+
+        // $request->validate([
+        //     'title' => 'required',
+        //     'images' => 'rrequired',
+        //     'tags' => 'required',
+        //     'category' => 'required'
+        // ]);
+
+        // $blog = new BlogController();
+
+        // $blog->title = $request->title;
+        // $blog->slug = str_slug($request->title, '-');
+        // $blog->tags = $request->tags;
+        // $blog->category = $request->category;
+
+        
     }
 
     /**

@@ -72,9 +72,9 @@
                                     <!-- start our-story -->
                                     <article class="our-story">
                                         <h2 class="section-title">ABOUT US</h2>
-                                        <p>Apex Triangle is a IT company based in Lagos , Nigeria. We offer a lot of services ranging from Design/Development of Web Apps, Moblie Application Development, Digital Marketing, Cloud Computing, Hard Ware Integrations e.t.c</p>
-                                        <p>This Is the Brain work of some Bright Minded Nigerian Youth, Who has seen the challeges the facing the country and are ready to counter this challenges by Creating Unique and Intuitive Product and Solution in high Fashion without breaking the bank </p>
-                                        <p></p>
+                                        <p>Apex Triangle is a Software developement company based in Lagos, Nigeria. We offer a lot of services ranging from Design/Development of Web Apps, Moblie Application Development, Digital Marketing, Cloud Computing, Hardware Integrations e.t.c</p>
+                                        <p>This Is the Brain work of some bright minded Nigerian youth, Who has seen the challeges the facing the country and are ready to counter this challenges by creating unique and intuitive product and solution in high fashion without breaking the bank </p>
+                                        <p>Our Mission: Provide digital solutions to some to the most challeging problems. </p>
                                         <div class="text-left block-btn-parent">
                                             <a href="#contact" data-target="#contact" class="menu-smooth-scroll mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-default btn-black">get in touch</a>
                                         </div>

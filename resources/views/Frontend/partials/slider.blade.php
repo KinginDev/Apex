@@ -49,14 +49,35 @@
                                     data-splitout="none"
                                     data-responsive_offset="on"
                                     style="z-index: 7; white-space: nowrap; text-align: center">
+    
+                                  {{--   <img src="{{asset('img/logo/57x57.png')}}" style="margin: 30px 0px !important;" alt=""> --}}
+                                </div>
+                                 <!-- LAYER NR. 3 -->
+                                <div class="tp-caption rev-title-typo tp-resizeme rs-parallaxlevel-0"
+                                    id="sl1-lyr2"
+                                    data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                    data-y="['middle','middle','middle','middle']" data-voffset="['-54','-52','-84','-79']"
+                                    data-fontsize="['50','45','50','40']"
+                                    data-lineheight="['58','52','58','46']"
+                                    data-width="['1200','1000','750','480']"
+                                    data-height="none"
+                                    data-whitespace="normal"
+                                    data-transform_idle="o:1;"
+                                    data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"
+                                    data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                    data-mask_in="x:0px;y:0px;"
+                                    data-mask_out="x:inherit;y:inherit;"
+                                    data-start="1000"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-responsive_offset="on"
+                                    style="z-index: 7; white-space: nowrap; text-align: center">
                                    
-                                    <img src="{{asset('img/logo/57x57.png')}}" style="margin: 10px; 0px" alt="">
-                                    <div class="clearfix"></div>
                                     Apex <span>Traingle</span>
 
                                 </div>
 
-                                <!-- LAYER NR. 3 -->
+                                <!-- LAYER NR. 4 -->
                                 <div class="tp-caption rev-subtitle-typo tp-resizeme rs-parallaxlevel-0"
                                     id="sl1-lyr3"
                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
@@ -78,7 +99,7 @@
                                     style="z-index: 8; white-space: nowrap; text-align:center; ">If you can dream it, We can Build It <span class="break">with endless possibilites.</span>
                                 </div>
 
-                                <!-- LAYER NR. 4 -->
+                                <!-- LAYER NR. 5 -->
                                 <div class="tp-caption rev-slider-btns rs-parallaxlevel-0"
                                     id="sl1-lyr4"
                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
@@ -169,6 +190,7 @@
                                     style="z-index: 3; white-space: nowrap; color: #efefef">
                                 </h3>
 
+
                                 <!-- LAYER NR. 4 -->
                                 <div class="tp-caption slide-2"
                                     id="sl2-lyr4"
@@ -186,7 +208,7 @@
                                     data-responsive_offset="on"
                                     style="z-index: 3; white-space: nowrap;">
 
-                                    <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-lg btn-highlight btn-default tp-resizeme rs-parallaxlevel-0">call to action</a>
+                                    <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-lg btn-highlight btn-default tp-resizeme rs-parallaxlevel-0">Request For a Quote</a>
                                 </div>
 
                                 <!-- LAYER NR. 5 -->
@@ -223,7 +245,7 @@
                                     data-basealign="slide"
                                     data-responsive_offset="on"
                                     data-width="['none', 'none', 'none', '0px']"
-                                    style="z-index: 2; text-aligh: right;">
+                                    style="z-index: 2; text-align : right;">
 
                                     <img src="{{asset('img/banner/bg-4.png')}}" alt="" width="996"
                                         data-ww="['996px','600px','600px','0px']"
@@ -326,7 +348,7 @@
                                     data-splitin="none"
                                     data-splitout="none"
                                     data-responsive_offset="on" style="z-index: 3; white-space: nowrap;">
-                                    <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-highlight btn-lg btn-default tp-resizeme rs-parallaxlevel-0">call to action</a>
+                                    <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-highlight btn-lg btn-default tp-resizeme rs-parallaxlevel-0">Request For a Quote</a>
                                 </div>
                             </li>
 

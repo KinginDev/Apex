@@ -1,5 +1,6 @@
-@extends('admin.layouts.app')
+@extends('admin.layouts.main')
 @section('content')
+<div class="content">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
@@ -86,5 +87,5 @@
             </div>
         </div>
     </div>
-
+</div>
 @endsection

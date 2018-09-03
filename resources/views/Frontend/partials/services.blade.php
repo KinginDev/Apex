@@ -20,9 +20,9 @@
                                                 <!-- start tab menu item-->
                                                 <div class="mdl-tabs__tab-bar matx-service-tabbar mdl-shadow--2dp">
                                                     <a href="#tab1" class="mdl-tabs__tab is-active"><i class="zmdi zmdi-brush"></i></a>
-                                                    <a href="#tab2" class="mdl-tabs__tab"><i class="zmdi zmdi-collection-folder-image"></i></a>
+                                                    <a href="#tab2" class="mdl-tabs__tab"><i class="zmdi zmdi-group-work"></i></a>
                                                     <a href="#tab3" class="mdl-tabs__tab"><i class="zmdi zmdi-laptop-chromebook"></i></a>
-                                                    <a href="#tab6" class="mdl-tabs__tab"><i class="zmdi zmdi-laptop-reader"></i></a>
+                                                    <a href="#tab6" class="mdl-tabs__tab"><i class="zmdi zmdi-input-power"></i></a>
                                                     <a href="#tab4" class="mdl-tabs__tab"><i class="zmdi zmdi-cloud-outline-alt"></i></a>
                                                     <a href="#tab5" class="mdl-tabs__tab"><i class="zmdi zmdi-smartphone-iphone"></i></a>
                                                 </div>
@@ -42,7 +42,7 @@
                                                         <div class="col-sm-6">
                                                             <div class="tab-content text-center">
                                                                 <!-- service featured image -->
-                                                                <img src="img/service/07.jpg" alt="matx" class="bordred-img">
+                                                                <img src="{{asset('img/service/07.jpg')}}" alt="matx" class="bordred-img">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -66,7 +66,7 @@
                                                         <div class="col-sm-6">
                                                             <div class="tab-content text-center">
                                                                 <!-- service featured image -->
-                                                                <img src="img/service/08.jpg" alt="matx" class="bordred-img">
+                                                                <img src="{{asset('img/service/training.jpg')}}" alt="matx" class="bordred-img">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -90,7 +90,7 @@
                                                         <div class="col-sm-6">
                                                             <div class="tab-content text-center">
                                                                 <!-- service featured image -->
-                                                                <img src="img/service/09.jpg" alt="matx" class="bordred-img">
+                                                                <img src="{{asset('img/service/09.jpg')}}" alt="matx" class="bordred-img">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -113,7 +113,7 @@
                                                         <div class="col-sm-6">
                                                             <div class="tab-content text-center">
                                                                 <!-- service featured image -->
-                                                                <img src="img/service/10.jpg" alt="matx" class="bordred-img">
+                                                                <img src="{{asset('img/service/10.jpg')}}" alt="matx" class="bordred-img">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -138,7 +138,7 @@
                                                         <div class="col-sm-6">
                                                             <div class="tab-content text-center">
                                                                 <!-- service featured image -->
-                                                                <img src="img/service/11.jpg" alt="matx" class="bordred-img">
+                                                                <img src="{{asset('img/service/11.jpg')}}" alt="matx" class="bordred-img">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -162,7 +162,7 @@
                                                         <div class="col-sm-6">
                                                             <div class="tab-content text-center">
                                                                 <!-- service featured image -->
-                                                                <img src="img/service/12.jpg" alt="matx" class="bordred-img">
+                                                                <img src="{{asset('img/service/12.jpg')}}" alt="matx" class="bordred-img">
                                                             </div>
                                                         </div>
                                                     </div>
