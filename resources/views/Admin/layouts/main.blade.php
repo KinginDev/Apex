@@ -19,6 +19,8 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="{{asset('admin/demo/demo.css')}}" rel="stylesheet" />
   <link href="{{asset('/admin/css/bootstrap-tagsinput.css')}}" rel="stylesheet" />
+   <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+
  @yield('styles')
 </head>
 <body>

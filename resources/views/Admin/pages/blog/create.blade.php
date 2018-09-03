@@ -17,13 +17,29 @@
   padding: 3px;
   width: 100% !important;
 }
+input#image{
+  display: none;
+}
+.file-btn{
+  width: auto;
+  margin: 20px;
+  height: auto;
+  padding: 10px 15px;
+  border: 1px solid #eee;
+  outline: none;
+  cursor: pointer;
+}
+.file-btn:hover{
+  background: #efefefef;
+  box-shadow: 1px 1px 2px #eee;
+}
 </style>
 @endsection
 
 @section('content')
 <div class="content">
     <div class="container">
-        <div class="col-md-8 offset-md-2">
+        <div class="12">
             <div class="card">
                 <div class="card-body">
                     <form action="">
@@ -32,10 +48,11 @@
                             <input type="text" name="title" class="form-control" placeholder="This is My First Blog Post">
                         </div>
                          <div class="form-group">
-                            <label for="">Images <small>(You can have more than one images'(s))</small></label>
-                            <input type="file" name="images[]" class="form-control" multiple>
+                          <label for="">Images <small>(You can have more than one images'(s))</small></label><br>
+                            <label class="file-btn" for="image">Click to upload</label>
+                            <input type="file" name="images[]" multiple id="image" onchange="handleFiles(this.files)">
                         </div>
-                        <div class="form-control">
+                        <div class="form-group">
                             <label for="Tags">All Related Tags</label>
                             <input type="text" class="form-control" name="tags[]" id="tags" data-role="tagsinput" size="3">
                         </div>
