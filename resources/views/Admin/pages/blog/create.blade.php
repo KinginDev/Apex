@@ -49,7 +49,7 @@ input#image{
                         </div>
                          <div class="form-group">
                           <label for="">Images <small>(You can have more than one images'(s))</small></label><br>
-                            <label class="file-btn" for="image">Click to upload</label>
+                            <label class="file-btn" for="image">Click to upload</label> <span class="text-primary" class="fileList">  </span>
                             <input type="file" name="images[]" multiple id="image" onchange="handleFiles(this.files)">
                         </div>
                         <div class="form-group">
