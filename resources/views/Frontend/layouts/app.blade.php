@@ -92,11 +92,11 @@
                             <div class="row">
                                 <div class="text-center ft-content-start">
                                     <a href="" data-target="#home" class="logo menu-smooth-scroll footer-logo wow fadeIn" data-wow-duration="1s">
-                                        <img src="img/logo_lite.png" alt="logo">
+                                        <img src="img/logo/72x72.png" alt="logo">
                                     </a>
                                     <ul class="clearfix social footer-social hover-round">
                                         <li><a href="#"><i class="zmdi zmdi-facebook"></i></a></li>
-                                        <li><a href="#"><i class="zmdi zmdi-twitter"></i></a></li>
+                                        <li><a href="https://twitter.com/ApexTriangle/" target="_blank"><i class="zmdi zmdi-twitter"></i></a></li>
                                         <li><a href="#"><i class="zmdi zmdi-google-plus"></i></a></li>
                                         <li><a href="#"><i class="zmdi zmdi-instagram"></i></a></li>
                                     </ul>

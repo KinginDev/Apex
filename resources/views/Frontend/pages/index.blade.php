@@ -60,21 +60,21 @@
                             <div class="section-common-space">
                                 <h2 class="section-title">CONTACT US</h2>
                                 <div class="contact-info">
-                                    <div class="clearfix ci-items">
+                                   {{--  <div class="clearfix ci-items">
                                         <span class="ci-icons"><i class="zmdi zmdi-home"></i></span>
                                         <address>1600 Amphitheatre Parkway, Mountain View, CA 94043, US</address>
-                                    </div>
+                                    </div> --}}
                                     <div class="clearfix ci-items">
                                         <span class="ci-icons"><i class="zmdi zmdi-email"></i></span>
-                                        <address>info@coderpixel.com</address>
+                                        <address>info@apex-triangle.com</address>
                                     </div>
                                     <div class="clearfix ci-items">
                                         <span class="ci-icons"><i class="zmdi zmdi-phone"></i></span>
-                                        <address>0088 1234 567890</address>
+                                        <address>support@apex-triangle.com</address>
                                     </div>
                                     <div class="clearfix ci-items">
                                         <span class="ci-icons"><i class="zmdi zmdi-globe"></i></span>
-                                        <address>www.coderpixel.com</address>
+                                        <address>www.apex-triangle.com</address>
                                     </div>
                                 </div>
                             </div>

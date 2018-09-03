@@ -46,9 +46,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="text-center tab-histry">
+                                                   {{--  <div class="text-center tab-histry">
                                                         <span>2015 TO 2018</span> - WEB DESIGN EXPERIENCE
-                                                    </div>
+                                                    </div> --}}
                                                     
                                                 </div>
                                                 <!-- end single tab-->
@@ -58,10 +58,10 @@
                                                     <div class="row tab-title-wrap">
                                                         <div class="col-sm-6">
                                                             <!-- service tab title -->
-                                                            <h3 class="card-title tab-title">GRAPHIC DESIGN</h3>
-                                                            <p class="columnd-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, exerci tation suscipit ad minim veniam.</p>
+                                                            <h3 class="card-title tab-title">IT TRAINGING</h3>
+                                                            <p class="columnd-text">It has been our passion ever since starting out as a company to impart knowledge at its most accuracy.</p>
 
-                                                            <p>Exerci tation suscipit lobortis nisl ut aliquip ex ea commodo consequat exerci tation suscipit lobortis nisl ut laoreet dolore magna aliquam ut aliquip ex ea commodo consequat. </p>
+                                                            <p>We train people in areas such as web development, mobile development , cloud computing & More.</p>
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <div class="tab-content text-center">
@@ -70,9 +70,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="text-center tab-histry">
+                                                   {{--  <div class="text-center tab-histry">
                                                         <span>2015 TO 2014</span> - GRAPHIC DESIGN EXPERIENCE
-                                                    </div>
+                                                    </div> --}}
                                                     
                                                 </div>
                                                 <!-- end single tab-->
@@ -83,9 +83,9 @@
                                                         <div class="col-sm-6">
                                                             <!-- service tab title -->
                                                             <h3 class="card-title tab-title">WEB DEVELOPMENT</h3>
-                                                            <p class="columnd-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, exerci tation suscipit ad minim veniam.</p>
+                                                            <p class="columnd-text">We help develop websites in any fashion. Be it an eCommerce site, a CMS (i.e Wordpress) plugin or template, to enterprise business apps.</p>
 
-                                                            <p>Exerci tation suscipit lobortis nisl ut aliquip ex ea commodo consequat exerci tation suscipit lobortis nisl ut laoreet dolore magna aliquam ut aliquip ex ea commodo consequat. </p>
+                                                            <p>Here at Apex we are more concerned on giving you the best, buy building a well architecured  web app, we also intergrate some mobile app features (PWA) into your web app</p>
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <div class="tab-content text-center">
@@ -94,9 +94,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="text-center tab-histry">
+                                                   {{--  <div class="text-center tab-histry">
                                                         <span>2015 TO 2014</span> - WEB DEVELOPMENT EXPERIENCE
-                                                    </div>
+                                                    </div> --}}
                                                    
                                                 </div>
                                                 <!-- end single tab-->
@@ -117,9 +117,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="text-center tab-histry">
+                                                   {{--  <div class="text-center tab-histry">
                                                         <span>2015 TO 2014</span> - HARDWARE INTEGRATION EXPERIENCE
-                                                    </div>
+                                                    </div> --}}
                                                    
                                                 </div>
                                                 <!-- end single tab-->
@@ -129,10 +129,10 @@
                                                         <div class="col-sm-6">
                                                             <!-- service tab title -->
                                                             <h3 class="card-title tab-title">CLOUD COMPUTING</h3>
-                                                            <p class="columnd-text">We are Exprienced in using the clod for our advantage</p>
+                                                            <p class="columnd-text">We are Exprienced in using the cloud for our advantage</p>
 
                                                             <p>Our Experinece Cuts Across Helping you manage your data on the cloud or delopy your Projects to the cloud and also sclae your app accordingly . <br>
-                                                                Some Of the Platforms We've Worked with Include Services from AWS (AMAZON)
+                                                                Some Of the Platforms We've Worked with Include Services from AWS (AMAZON), GCP (GOOGLE CLOUD PLATFORM) , AZURE & Many more.
                                                             </p>
                                                         </div>
                                                         <div class="col-sm-6">
@@ -142,9 +142,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="text-center tab-histry">
+                                                  {{--   <div class="text-center tab-histry">
                                                         <span>2015 TO 2014</span> - CLOUD COMPUTING EXPERIENCE
-                                                    </div>
+                                                    </div> --}}
                                                     
                                                 </div>
                                                 <!-- end single tab-->
@@ -155,9 +155,9 @@
                                                         <div class="col-sm-6">
                                                             <!-- service tab title -->
                                                             <h3 class="card-title tab-title">MOBILE APP DEVELOPMENT</h3>
-                                                            <p class="columnd-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, exerci tation suscipit ad minim veniam.</p>
+                                                            <p class="columnd-text">We also develop moblie apps and backend api's to help manage data for your mobile app.</p>
 
-                                                            <p>Exerci tation suscipit lobortis nisl ut aliquip ex ea commodo consequat exerci tation suscipit lobortis nisl ut laoreet dolore magna aliquam ut aliquip ex ea commodo consequat. </p>
+                                                            <p></p>
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <div class="tab-content text-center">
@@ -166,9 +166,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="text-center tab-histry">
+                                                   {{--  <div class="text-center tab-histry">
                                                         <span>2015 TO 2014</span> - MOBILE DEVELOPMENT EXPERIENCE
-                                                    </div>
+                                                    </div> --}}
                                                     <!-- project counter -->
                                                     {{-- <div class="row satistic-wrap">
                                                         <div class="col-xxs-6 col-xs-3 text-center">
