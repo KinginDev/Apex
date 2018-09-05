@@ -60,7 +60,7 @@ class BlogController extends Controller
              foreach( $request->file('images') as $image){
                 $name = $image->getClientOriginalName();
                 $image_name = $image->getRealPath();
-                Cloudder::upload($image_name,  array("timeout" => 200));
+                Cloudder::upload($name));
                 list($width, $height) = getimagesize($image_name);
                 
                 $image_url= Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height"=>$height]);
