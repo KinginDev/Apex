@@ -5,7 +5,10 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use JD\Cloudder\Facades\Cloudder;
 use App\Category;
+use App\Blog;
+use App\BlogImage;
 
 class BlogController extends Controller
 {
@@ -16,7 +19,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-     
+     return  view('admin.pages.blog.index');
     }
 
     /**
@@ -26,8 +29,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-    //     $categories  = Category::all();
-       return view('admin.pages.blog.create');
+         $categories  = Category::all();
+       return view('admin.pages.blog.create')->with(compact(['categories']));
     }
 
     /**
@@ -38,29 +41,50 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->hasFile('images')){
-            foreach ($request->images as $value) {
-               echo ($value);
-            }
-        }else{
-            throw new  Exception("Error Processing Request", 1);
-            
-        }
+         $request->validate([
+             'title' => 'required',
+             'images' => 'required',
+             'tags' => 'required',
+             'category' => 'required'
+         ]);
 
-        // $request->validate([
-        //     'title' => 'required',
-        //     'images' => 'rrequired',
-        //     'tags' => 'required',
-        //     'category' => 'required'
-        // ]);
+         $blog = new Blog();
 
-        // $blog = new BlogController();
+         $blog->title = $request->title;
+         $blog->slug = str_slug($request->title, '-');
+         $blog->tags = $request->tags;
+         $blog->category = $request->category;
+        
+        //images
+         if($request->hasfile('images')){
+             foreach( $request->file('images') as $image){
+                $name = $image->getClientOriginalName();
+                $image_name = $image->getRealPath();
+                Cloudder::upload($image_name,  array("timeout" => 200));
+                list($width, $height) = getimagesize($image_name);
+                
+                $image_url= Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height"=>$height]);
+                //save to uploads directory
+                 $image->move(public_path("uploads"), $name);
+                 $this->saveImages($image,$image_url,$blog->id );
+             }
+             $blog->save();
+            return redirect()->back()->with('status', 'Image Uploaded Successfully');
+         }else{
+             throw new \Exception('Error');
+         }
+        
 
-        // $blog->title = $request->title;
-        // $blog->slug = str_slug($request->title, '-');
-        // $blog->tags = $request->tags;
-        // $blog->category = $request->category;
-
+        
+    }
+    public function saveImages($data,$id){
+        $image = new BlogImage();
+        
+        $image->blog_id = $id;
+        $image->name = $data;
+        $image->url = $image_url;
+        $image->save();
+        return true;
         
     }
 

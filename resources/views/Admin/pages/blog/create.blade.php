@@ -42,32 +42,53 @@ input#image{
         <div class="12">
             <div class="card">
                 <div class="card-body">
-                    <form action="">
+                    <form action="{{route('blog.store')}}" method="post" enctype="multipart/form-data">
+                       @csrf
                         <div class="form-group">
                             <label for="">Title</label>
-                            <input type="text" name="title" class="form-control" placeholder="This is My First Blog Post">
+                            <input type="text" name="title" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" value="{{ old('title') }}" required autofocus placeholder="This is My First Blog Post">
+                              @if ($errors->has('title'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('title') }}</strong>
+                                    </span>
+                                @endif
                         </div>
                          <div class="form-group">
                           <label for="">Images <small>(You can have more than one images'(s))</small></label><br>
                             <label class="file-btn" for="image">Click to upload</label> <span class="text-primary" class="fileList">  </span>
-                            <input type="file" name="images[]" multiple id="image" onchange="handleFiles(this.files)">
+                            <input type="file" name="images[]" multiple id="image" class="{{ $errors->has('images') ? ' is-invalid' : '' }}" value="{{ old('images') }}"   onchange="handleFiles(this.files)">
+                              @if ($errors->has('images'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('images') }}</strong>
+                                    </span>
+                                @endif
                         </div>
                         <div class="form-group">
                             <label for="Tags">All Related Tags</label>
-                            <input type="text" class="form-control" name="tags[]" id="tags" data-role="tagsinput" size="3">
+                            <input type="text" class="form-control {{ $errors->has('tags') ? ' is-invalid' : '' }}" value="{{ old('tags') }}" required autofocus name="tags[]" id="tags" data-role="tagsinput" size="3">
                         </div>
                         <div class="form-group">
-                          {{--   <label for="">Categories</label>
-                               <select name="category_id" id="" class="form-control">
+                                 <label for="">Categories</label>
+                               <select name="category" id="" class="form-control  {{ $errors->has('category') ? ' is-invalid' : '' }}" value="{{ old('category') }}" required >
                                  <option value="">Select A Category</option>
                                   @foreach($categories as $category)
                                     <option value="{{$category->id}}">{{$category->name}}</option>
                                  @endforeach
-                               </select> --}}
+                               </select>
+                              @if ($errors->has('category'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('category') }}</strong>
+                                    </span>
+                                @endif
                         </div>
                          <div class="form-group">
                             <label for="">Content</label>
-                             <textarea  name="content" class="form-control" rows="9" cols="6"></textarea>
+                             <textarea name="content" class="form-control{{ $errors->has('content') ? ' is-invalid' : '' }}" value="{{ old('content') }}"   rows="9" cols="6"></textarea>
+                              @if ($errors->has('images'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('images') }}</strong>
+                                    </span>
+                                @endif
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btn btn-outline-primary btn-block">
