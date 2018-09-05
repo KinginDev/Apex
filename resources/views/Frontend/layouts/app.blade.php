@@ -65,6 +65,7 @@
         <!--[if lt IE 9]>
             <script src="{{asset('/js/vendor/html5shiv.js')}}"></script>
         <![endif]-->
+        @include('Frontend.partials.analytics')
 
     </head>
     <body>
