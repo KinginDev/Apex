@@ -14,6 +14,6 @@ class Controller extends BaseController
     **/
     
     public function dashboard(){
-        return view('admin.pages.dashboard');
+        return view('Admin.pages.dashboard');
     }
 }

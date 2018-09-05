@@ -20,7 +20,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-     return  view('admin.pages.blog.index');
+     return  view('Admin.pages.blog.index');
     }
 
     /**
@@ -31,7 +31,7 @@ class BlogController extends Controller
     public function create()
     {
          $categories  = Category::all();
-       return view('admin.pages.blog.create')->with(compact(['categories']));
+       return view('Admin.pages.blog.create')->with(compact(['categories']));
     }
 
     /**
