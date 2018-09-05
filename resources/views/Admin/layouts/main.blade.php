@@ -26,7 +26,7 @@
 <body>
 	<div class="wrapper ">
 		<!--Include Sidebar-->
-		@include('admin.partials.sidebar')
+		@include('Admin.partials.sidebar')
 		<div class="main-panel">
 	      <!-- Navbar -->
 	      <nav class="navbar navbar-expand-lg navbar-transparent  navbar-absolute bg-primary fixed-top">
