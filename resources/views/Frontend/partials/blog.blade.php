@@ -14,11 +14,15 @@
 
                             <div class="row blog-post-grid">
                                 <!-- start single blog post-->
+                               {{--  @foreach($blogs as $blog)
                                 <article class="col-xxs-12 col-xs-6 col-sm-4 single-blog-post">
                                     <div class="mdl-card jumbo-shadow mdl-shadow--2dp">
                                         <div class="post-thumb-wrap">
                                             <!-- blog post thumbnail -->
-                                            <img src="img/blog/bp1.jpg" alt="Blog 1 Thumb">
+                                            <?php
+                                               
+                                            ?>
+                                            <img src="" alt="Blog 1 Thumb">
                                             <div class="post-meta-info">
                                                 <!-- post date -->
                                                 <span class="post-meta-date">Merch 14, 2015</span>
@@ -26,11 +30,11 @@
                                         </div>
                                         <div class="post-content-wrap">
                                             <!-- blog post title -->
-                                            <h2 class="mdl-card__title-text mdl-card__title-content"><a href="blog/single/single.html">We support any type of design</a></h2>
+                                            <h2 class="mdl-card__title-text mdl-card__title-content"><a href="#">{{$blog->title}}</a></h2>
 
                                             <!-- blog post content -->
                                             <div class="mdl-card__supporting-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro velit laboriosam eius amet nobis repellat fugiat adipisci.</p>
+                                                <p>{{ substr($blog->body,0,50) }} {{ strlen($blog->body) > 50 ? ".....": ""}}</p>
                                             </div>
                                         </div>
                                         <div class="mdl-card__actions mdl-card--border">
@@ -51,6 +55,7 @@
                                         </div>
                                     </div>
                                 </article>
+                                @endforeach --}}
                                 <!-- end single blog post-->
 
                                 <!-- start single blog post -->

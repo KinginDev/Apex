@@ -6,11 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Blog extends Model
 {
-   
+   protected $with = ['category'];
+
    public function images(){
-         $this->hasMany('App\BlogImages');
+         return $this->hasMany('App\BlogImages', 'blog_id');
     }
     public function category(){
-         $this->hasOne('App\Category');
+       return  $this->belongsTo('App\Category');
     }
 }

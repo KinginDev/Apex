@@ -12,20 +12,20 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="active ">
+          <li class="{{ active('admin.dashboard') }}">
             <a href="/admin/dashboard">
               <i class="now-ui-icons design_app"></i>
               <p>Dashboard</p>
             </a>
           </li>
           <li>
-            <a href="{{route('blog.index')}}">
+            <a href="{{route('blog.index')}}" class="{{ active('blog.index') }}">
               <i class="now-ui-icons education_atom"></i>
               <p>Blog</p>
             </a>
           </li>
           <li>
-            <a href="{{route('category.index')}}">
+            <a href="{{route('category.index')}}" class="{{ active('category.index') }}">
               <i class="now-ui-icons location_map-big"></i>
               <p>Categories</p>
             </a>
@@ -33,7 +33,7 @@
           <li>
             <a href="#">
               <i class="now-ui-icons ui-1_bell-53"></i>
-              <p>Tags</p>
+              <p>Projects</p>
             </a>
           </li>
           <li>

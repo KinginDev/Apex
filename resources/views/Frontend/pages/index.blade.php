@@ -24,8 +24,8 @@
          
             <!-- end testimonial and client logo section -->
 
-            <!-- start blog and newsletter section -->
-            @include('Frontend.partials.blog')
+            <!-- start blog and newsletter section -->{{-- 
+            @include('Frontend.partials.blog', [$blogs => 'blogs']) --}}
             <!-- end blog and newsletter section -->
             @include('Frontend.partials.misc')
 

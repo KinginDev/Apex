@@ -40,6 +40,23 @@ input#image{
 <div class="content">
     <div class="container">
         <div class="12">
+          @if (Session::has('success'))
+
+              <div class="alert alert-success alert-dismissable">
+                <strong>Success: {{Session::get('success') }}</strong>
+              </div>
+
+              @endif
+
+              @if (count($errors) > 0)
+                
+                <div class="alert alert-danger">
+                <strong>Errors:</strong>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+              </div>
+              @endif
             <div class="card">
                 <div class="card-body">
                     <form action="{{route('blog.store')}}" method="post" enctype="multipart/form-data">

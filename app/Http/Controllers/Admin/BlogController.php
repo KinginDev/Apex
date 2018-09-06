@@ -19,7 +19,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-     return  view('Admin.pages.blog.index');
+        $blogs = Blog::paginate(2);
+     return  view('Admin.pages.blog.index')->withBlogs($blogs);
     }
 
     /**
@@ -52,28 +53,26 @@ class BlogController extends Controller
 
          $blog->title = $request->title;
          $blog->slug = str_slug($request->title, '-');
-         $blog->tags = $request->tags;
-         $blog->category = $request->category;
-        
-        //images
+         $blog->tags = implode(',',$request->tags);
+         $blog->category_id = $request->category;
+         $blog->content = $request->content;
+         $blog->save();
+
+        //Images
          if($request->hasfile('images')){
              foreach( $request->file('images') as $image){
                 $name = $image->getClientOriginalName();
                 $image_name = $image->getRealPath();
-                Cloudder::upload($name));
+                Cloudder::upload($image_name,null);
                 list($width, $height) = getimagesize($image_name);
                 
                 $image_url= Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height"=>$height]);
                 //save to uploads directory
                  $image->move(public_path("uploads"), $name);
                  $this->saveImages($image,$image_url,$blog->id );
-//                  $image_name = $image->getRealPath();
-//                $t = Storage::disk('s3')->put($name, file_get_contents($image), 'public');
-//                $image_url = Storage::disk('s3')->url($name);
-//                 dd($image_url);
              }
-             $blog->save();
-            return redirect()->back()->with('status', 'Image Uploaded Successfully');
+             Session::flash('success', 'Blog Post Successfully Uploaded');
+            return redirect()->back();
          }else{
              throw new \Exception('Error');
          }
@@ -81,9 +80,8 @@ class BlogController extends Controller
 
         
     }
-    public function saveImages($data,$id){
+    public function saveImages($data, $image_url,$id){
         $image = new BlogImage();
-        
         $image->blog_id = $id;
         $image->name = $data;
         $image->url = $image_url;

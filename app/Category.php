@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
+
+	public $with = ['posts'];
      public function posts()
     {
-        $this->hasMany('App\Blog');
+        return $this->hasMany('App\Blog');
     }
 }

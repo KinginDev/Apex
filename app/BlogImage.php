@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class BlogImage extends Model
 {
     public function post(){
-         $this->hasOne('App\Blog');
+         return $this->belongsTo('App\Blog');
     }
 }

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Blog;
 class HomeController extends Controller
 {
    
@@ -14,7 +14,9 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    // {
+    // 	$blogs = Blog::paginate(3);
         return view('Frontend.pages.index');
+        // ->withBlogs($blogs);
     }
 }
