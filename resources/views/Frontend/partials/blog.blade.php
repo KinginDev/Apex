@@ -14,7 +14,7 @@
 
                             <div class="row blog-post-grid">
                                 <!-- start single blog post-->
-                               {{--  @foreach($blogs as $blog)
+                                @foreach($blogs as $blog)
                                 <article class="col-xxs-12 col-xs-6 col-sm-4 single-blog-post">
                                     <div class="mdl-card jumbo-shadow mdl-shadow--2dp">
                                         <div class="post-thumb-wrap">
@@ -55,7 +55,7 @@
                                         </div>
                                     </div>
                                 </article>
-                                @endforeach --}}
+                                @endforeach
                                 <!-- end single blog post-->
 
                                 <!-- start single blog post -->

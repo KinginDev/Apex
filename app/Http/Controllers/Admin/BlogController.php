@@ -69,7 +69,7 @@ class BlogController extends Controller
                 $image_url= Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height"=>$height]);
                 //save to uploads directory
                  $image->move(public_path("uploads"), $name);
-                 $this->saveImages($image,$image_url,$blog->id );
+                 $this->saveImages($name,$image_url,$blog->id );
              }
              Session::flash('success', 'Blog Post Successfully Uploaded');
             return redirect()->back();

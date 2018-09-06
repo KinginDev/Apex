@@ -14,9 +14,8 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    // {
-    // 	$blogs = Blog::paginate(3);
-        return view('Frontend.pages.index');
-        // ->withBlogs($blogs);
+    {
+    	$blogs = Blog::paginate(3);
+        return view('Frontend.pages.index')->withBlogs($blogs);
     }
 }
