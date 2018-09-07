@@ -32,5 +32,7 @@ Route::prefix('admin')->group(function(){
         Route::resource('/blog', 'Admin\BlogController');
         //Category Resource
         Route::resource('/category', 'Admin\CategoryController');
+       // Project Resource
+        Route::resource('/project', 'Admin\ProjectsController');
     });
 });

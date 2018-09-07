@@ -4,13 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App/Category;
+use App\Project;
+use App\ProjectImage;
 
-use JD\Cloudder\Facades\Cloudder;
-use App\Category;
-use App\Blog;
-use App\BlogImage;
-
-class BlogController extends Controller
+class ProjectsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,8 +17,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::paginate(2);
-     return  view('Admin.pages.blog.index')->withBlogs($blogs);
+        return view('Admin.pages.projects.index');
     }
 
     /**
@@ -30,8 +27,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-         $categories  = Category::all();
-       return view('Admin.pages.blog.create')->with(compact(['categories']));
+        $categories  = Category::all();
+        return view('Admin.pages.projects.index')->with(compact(['categories']));
     }
 
     /**
@@ -42,22 +39,17 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-         $request->validate([
-             'title' => 'required',
-             'images' => 'required',
-             'tags' => 'required',
-             'category' => 'required'
-         ]);
+        $this->validate([
+        ]);
+        $project = new Project();
 
-         $blog = new Blog();
+        $project->project_info = $request->project_info
+        $project->live_url  = $request->live_url;
+        $project->client = $request->client;
+        $project->tools = $request->tools;
+        $project->tags = $request->tags;
 
-         $blog->title = $request->title;
-         $blog->slug = str_slug($request->title, '-');
-         $blog->tags = implode(',',$request->tags);
-         $blog->category_id = $request->category;
-         $blog->content = $request->content;
-         $blog->save();
-
+        $project->save();
         //Images
          if($request->hasfile('images')){
              foreach( $request->file('images') as $image){
@@ -71,17 +63,14 @@ class BlogController extends Controller
                  $image->move(public_path("uploads"), $name);
                  $this->saveImages($name,$image_url,$blog->id );
              }
-             Session::flash('success', 'Blog Post Successfully Uploaded');
+             Session::flash('success', 'Project Successfully Uploaded');
             return redirect()->back();
          }else{
              throw new \Exception('Error');
          }
-        
-
-        
     }
-    public function saveImages($data, $image_url,$id){
-        $image = new BlogImage();
+      public function saveImages($data, $image_url,$id){
+        $image = new ProjectImage();
         $image->blog_id = $id;
         $image->name = $data;
         $image->url = $image_url;
@@ -89,7 +78,6 @@ class BlogController extends Controller
         return true;
         
     }
-
     /**
      * Display the specified resource.
      *
@@ -98,8 +86,7 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-       
-
+        //
     }
 
     /**
@@ -110,9 +97,9 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-      $blog =  Blog::find($id);
+        $project = Project::find($id);
 
-        view('Admin.pages.blog.edit')->with(compact($blog));   
+        return view('Admin.pages.projects.edit')->with(compact('project'));
     }
 
     /**
@@ -124,20 +111,7 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-             'title' => 'required',
-             'tags' => 'required',
-             'category' => 'required'
-        ]);
-
-         $blog->title = $request->title;
-         $blog->slug = str_slug($request->title, '-');
-         $blog->tags = implode(',',$request->tags);
-         $blog->category_id = $request->category;
-         $blog->content = $request->content;
-         $blog->save();
-         Session::flash('success', 'Opertation Successful');
-         return redirect()->back();
+        //
     }
 
     /**
@@ -148,8 +122,8 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        $blog = Blog::find($id)->delete();
-         Session::flash('deleted', 'Blog Post with ID '.$id.' has been sucessfully deleted');
+        $blog = Project::find($id)->delete();
+         Session::flash('deleted', 'Project with ID '.$id.' has been sucessfully deleted');
          return redirect()->back();
     }
 }

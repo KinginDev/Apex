@@ -18,10 +18,10 @@
                                         <ul class="clearfix portfolio-category mdl-shadow--2dp">
                                             <li class="filter active" data-target="*">ALL</li>
                                             <li class="filter" data-target=".art">BLOGS</li>
-                                            <li class="filter" data-target=".accessories">ARTISTE</li>
+                                            <li class="filter" data-target=".accessories">ECOMMERCE</li>
                                             <li class="filter" data-target=".design">COMPANY</li>
                                             <li class="filter" data-target=".fashon">MUSIC PORTAL</li>
-                                            <li class="filter" data-target=".ecommerce">ECOMMERCE </li>
+                                            <li class="filter" data-target=".mobile-apps">MOBILE APPS </li>
                                         </ul>
                                         <!-- end portfolio filter items -->
 

@@ -18,4 +18,10 @@ class HomeController extends Controller
     	$blogs = Blog::paginate(3);
         return view('Frontend.pages.index')->withBlogs($blogs);
     }
+
+     public function getAllPosts($value='')
+    {
+    	$blogs = Blog::paginate(3);
+    	return responnse()->json($blogs);
+    }
 }
