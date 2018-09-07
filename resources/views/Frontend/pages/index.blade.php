@@ -3,7 +3,7 @@
 @section('content')
          
         <!-- start main wrapper   -->
-        <main class="main-wrapper">
+        <main class="main-wrapper" id="app">
 
             <!-- start revolution slider section-->
            @include('Frontend.partials.slider')

@@ -13,7 +13,8 @@
         <meta name="keywords" content="web development agency, nigerian web development agency, build websites and mobile apps, software development agency, build mobile apps, build websites with php, build websites with javascript, Build a better website, Cloud computing consultants, biometrics website, it training">
         <meta name="title" content="web/mobile development agency,">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
         <link rel="shortcut icon" href="{{asset('img//logo/57x57.png')}}">
 
         <!-- Google Fonts -->
@@ -126,8 +127,15 @@
 
         <!-- footer script start  -->
         <script>window.jQuery || document.write('<script type="text/javascript" src="{{asset('/js/vendor/jquery-1.10.2.min.js')}}"><\/script>')</script>
-        <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=YOUR_GOOGLE_MAP_API_KEY"></script>
-        <script type="text/javascript" src="//platform.twitter.com/widgets.js')}}"></script>
+       <script>
+           $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+       </script>{{-- 
+        <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=YOUR_GOOGLE_MAP_API_KEY"></script> --}}
+     {{--    <script type="text/javascript" src="//platform.twitter.com/widgets.js')}}"></script> --}}
         <script type="text/javascript" src="{{asset('/libs/mdl/material.min.js')}}"></script>
         <script type="text/javascript" src="{{asset('/js/all-plugins.js')}}"></script>
         <script type="text/javascript" src="{{asset('/js/common-plugins.js')}}"></script>
@@ -153,5 +161,6 @@
         <script type="text/javascript" src="{{asset('/js/common.js')}}"></script>
         <script type="text/javascript" src="{{asset('/js/all-components.js')}}"></script>
         <script type="text/javascript" src="{{asset('/js/main.js')}}"></script>
+
     </body>
 </html>

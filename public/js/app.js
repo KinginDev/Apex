@@ -47511,8 +47511,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-
-	name: 'blog',
 	data: function data() {
 		return {
 			posts: []
@@ -47529,6 +47527,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				_this.posts = data;
 			});
 		}
+	},
+	mounted: function mounted() {
+		this.getAllPosts();
+		console.log('Blog Instantiated');
 	}
 });
 
@@ -47540,117 +47542,97 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    _vm._l(_vm.posts, function(post) {
-      return _c(
-        "article",
-        {
-          key: post.id,
-          staticClass: "col-xxs-12 col-xs-6 col-sm-4 single-blog-post"
-        },
-        [
-          _c("div", { staticClass: "mdl-card jumbo-shadow mdl-shadow--2dp" }, [
-            _vm._m(0, true),
-            _vm._v(" "),
-            _c("div", { staticClass: "post-content-wrap" }, [
-              _c(
-                "h2",
-                { staticClass: "mdl-card__title-text mdl-card__title-content" },
-                [
-                  _c("a", { attrs: { href: "blog/single/single.html" } }, [
-                    _vm._v(_vm._s(post.title))
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _vm._m(1, true)
-            ]),
-            _vm._v(" "),
-            _vm._m(2, true)
-          ])
-        ]
-      )
-    })
-  )
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "post-thumb-wrap" }, [
-      _c("img", { attrs: { src: "img/blog/bp2.jpg", alt: "Blog 2 Thumb" } }),
-      _vm._v(" "),
-      _c("div", { staticClass: "post-meta-info" }, [
-        _c("span", { staticClass: "post-meta-date" }, [
-          _vm._v("Merch 14, 2015")
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mdl-card__supporting-text" }, [
-      _c("p", [
-        _vm._v(
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro velit laboriosam eius amet nobis repellat fugiat adipisci."
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mdl-card__actions mdl-card--border" }, [
-      _c("a", { staticClass: "blog-comments", attrs: { href: "#" } }, [
-        _vm._v("5 Comments")
-      ]),
-      _vm._v(" "),
-      _c("a", { staticClass: "blog-share", attrs: { id: "post-2" } }, [
-        _c("i", { staticClass: "zmdi zmdi-share" })
-      ]),
-      _vm._v(" "),
+    return _c("div", [
       _c(
-        "ul",
-        {
-          staticClass:
-            "mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect post-share-media js-post-share-media",
-          attrs: { "data-for": "post-2" }
-        },
+        "article",
+        { staticClass: "col-xxs-12 col-xs-6 col-sm-4 single-blog-post" },
         [
-          _c("li", { staticClass: "fb" }, [
-            _c("a", { attrs: { href: "blog/single/single.html" } }, [
-              _c("i", { staticClass: "zmdi zmdi-facebook-box" }),
+          _c("div", { staticClass: "mdl-card jumbo-shadow mdl-shadow--2dp" }, [
+            _c("div", { staticClass: "post-thumb-wrap" }, [
+              _c("img", {
+                attrs: { src: "img/blog/bp2.jpg", alt: "Blog 2 Thumb" }
+              }),
               _vm._v(" "),
-              _c("span", [_vm._v("Facebook")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "tw" }, [
-            _c("a", { attrs: { href: "blog/single/single.html" } }, [
-              _c("i", { staticClass: "zmdi zmdi-twitter-box" }),
+              _c("div", { staticClass: "post-meta-info" }, [
+                _c("span", { staticClass: "post-meta-date" }, [
+                  _vm._v("Merch 14, 2015")
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "post-content-wrap" }, [
+              _c(
+                "h2",
+                { staticClass: "mdl-card__title-text mdl-card__title-content" },
+                [_c("a", { attrs: { href: "blog/single/single.html" } })]
+              ),
               _vm._v(" "),
-              _c("span", [_vm._v("Twitter")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "gplus" }, [
-            _c("a", { attrs: { href: "blog/single/single.html" } }, [
-              _c("i", { staticClass: "zmdi zmdi-google-plus-box" }),
+              _c("div", { staticClass: "mdl-card__supporting-text" }, [
+                _c("p", [
+                  _vm._v(
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro velit laboriosam eius amet nobis repellat fugiat adipisci."
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "mdl-card__actions mdl-card--border" }, [
+              _c("a", { staticClass: "blog-comments", attrs: { href: "#" } }, [
+                _vm._v("5 Comments")
+              ]),
               _vm._v(" "),
-              _c("span", [_vm._v("Google plus")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "lin" }, [
-            _c("a", { attrs: { href: "blog/single/single.html" } }, [
-              _c("i", { staticClass: "zmdi zmdi-linkedin-box" }),
+              _c("a", { staticClass: "blog-share", attrs: { id: "post-2" } }, [
+                _c("i", { staticClass: "zmdi zmdi-share" })
+              ]),
               _vm._v(" "),
-              _c("span", [_vm._v("Linked In")])
+              _c(
+                "ul",
+                {
+                  staticClass:
+                    "mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect post-share-media js-post-share-media",
+                  attrs: { "data-for": "post-2" }
+                },
+                [
+                  _c("li", { staticClass: "fb" }, [
+                    _c("a", { attrs: { href: "blog/single/single.html" } }, [
+                      _c("i", { staticClass: "zmdi zmdi-facebook-box" }),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Facebook")])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "tw" }, [
+                    _c("a", { attrs: { href: "blog/single/single.html" } }, [
+                      _c("i", { staticClass: "zmdi zmdi-twitter-box" }),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Twitter")])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "gplus" }, [
+                    _c("a", { attrs: { href: "blog/single/single.html" } }, [
+                      _c("i", { staticClass: "zmdi zmdi-google-plus-box" }),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Google plus")])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "lin" }, [
+                    _c("a", { attrs: { href: "blog/single/single.html" } }, [
+                      _c("i", { staticClass: "zmdi zmdi-linkedin-box" }),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Linked In")])
+                    ])
+                  ])
+                ]
+              )
             ])
           ])
         ]

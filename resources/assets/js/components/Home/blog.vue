@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<!-- start single blog post -->
-                                <article class="col-xxs-12 col-xs-6 col-sm-4 single-blog-post" v-for="post in posts" :key="post.id">
+                                <article class="col-xxs-12 col-xs-6 col-sm-4 single-blog-post">
                                     <div class="mdl-card jumbo-shadow mdl-shadow--2dp">
                                         <div class="post-thumb-wrap">
 
@@ -16,7 +16,7 @@
                                         <div class="post-content-wrap">
 
                                             <!-- blog post title -->
-                                            <h2 class="mdl-card__title-text mdl-card__title-content"><a href="blog/single/single.html">{{post.title}}</a></h2>
+                                            <h2 class="mdl-card__title-text mdl-card__title-content"><a href="blog/single/single.html"></a></h2>
 
                                             <!-- blog post content -->
                                             <div class="mdl-card__supporting-text">
@@ -47,8 +47,6 @@
 <script>
 	import axios from 'axios'
 	export default{
-
-		name: 'blog',
 		data(){
 			return {
 				posts: []
@@ -61,8 +59,9 @@
 				});
 			}
 		},
-        created(){
+        mounted(){
             this.getAllPosts();
+            console.log('Blog Instantiated')
         }
 	}
 </script>

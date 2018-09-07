@@ -15,8 +15,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-    	$blogs = Blog::paginate(3);
-        return view('Frontend.pages.index')->withBlogs($blogs);
+    	$blogs = DB::table('projects')->skip(10)->take(5)->get();
+        dd($blogs);
+        return view('Frontend.pages.index');
     }
 
      public function getAllPosts($value='')
