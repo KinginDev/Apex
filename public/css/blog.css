@@ -14,7 +14,7 @@
 	Banner Background Style
 =======================================================*/
 .standred-blog-bg {
-  background-image: url("../../img/banner/sb_banner.jpg");
+  background-image: url("/img/banner/bg-1.jpg");
 }
 .masonry-sidebar-bg {
   background-image: url("../../img/banner/ms_sb.jpg");
@@ -23,7 +23,7 @@
   background-image: url("../../img/banner/full_blog.jpg");
 }
 .single-page-bg {
-  background-image: url("../../img/banner/sp_bg.jpg");
+  background-image: url("/img/banner/bg-1.jpg");
 }
 /* ====================================================
 	Banner styles

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Blog;
+use DB;
 class HomeController extends Controller
 {
    
@@ -15,9 +16,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-    	$blogs = DB::table('projects')->skip(10)->take(5)->get();
-        dd($blogs);
-        return view('Frontend.pages.index');
+        set_time_limit(0);
+    	$blogs = Blog::with(['images','category'])->take(3)->get();
+      
+        return view('Frontend.pages.index')->with(compact(['blogs']));
     }
 
      public function getAllPosts($value='')

@@ -13,7 +13,8 @@
 
 
 Route::get('/', 'HomeController@index');
-
+Route::get('/blog', 'BlogController@index')->name('index.blog');
+Route::get('/blog/show/{slug}', 'BlogController@show')->name('show.blog');
 
 Route::prefix('admin')->group(function(){
     Route::prefix('auth')->group(function(){
