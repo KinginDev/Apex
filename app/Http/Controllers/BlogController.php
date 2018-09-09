@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Blog;
-
+use App\Category;
 class BlogController extends Controller
 {
     /**
@@ -15,7 +15,7 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::paginate(20);
-
+       
         return view('Frontend.pages.blog.blog-standard')->with(compact('blogs'));
     }
 
@@ -48,8 +48,10 @@ class BlogController extends Controller
      */
     public function show($slug)
     {
-        $blog = Blog::with(['images','category'])->where('slug' , $slug)->first();
-        return view('Frontend.pages.blog.single')->with(compact('blog'));
+         $blog = Blog::with(['images','category'])->where('slug' , $slug)->first();
+         $latest = Blog::take(5)->latest()->get();
+        $categories = Category::take(5)->get();
+        return view('Frontend.pages.blog.single')->with(compact(['categories','latest','blog']));
     }
 
     /**

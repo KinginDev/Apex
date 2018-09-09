@@ -15,7 +15,7 @@
             @include('Frontend.partials.quote')
             <!-- end quote section -->
             <!-- start portfolio section-->
-             @include('Frontend.partials.portfolio')
+             @include('Frontend.partials.portfolio', ['projects' => $projects])
             <!-- end portfolio section-->
            
             <!-- start testimonial and client logo section -->
@@ -45,11 +45,7 @@
                         </div>
                     </div>
                 </section>
-                <!-- end twitter slider section -->
-
-            </section>
-            <!-- end pricing and twitter section -->
-
+            
             <!-- start contact section -->
             <section id="contact" class="section-main contact devide-50 devide-bg">
                 <div class="container">

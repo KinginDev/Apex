@@ -25,7 +25,7 @@
         <link rel="stylesheet" href="{{asset('/libs/owl-carousel/owl.carousel.css')}}">
         <link rel="stylesheet" href="{{asset('/libs/owl-carousel/owl.theme.css')}}">
         <link rel="stylesheet" href="{{asset('/libs/owl-carousel/owl.transitions.css')}}">
-
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{asset('/css/common.css')}}"> 
         <link rel="stylesheet" href="{{asset('/css/blog.css')}}">
         <link rel="stylesheet" href="{{asset('/css/responsive.css')}}">
@@ -47,6 +47,7 @@
         <!--[if lt IE 9]>
             <script src="{{asset('/js/vendor/html5shiv.js')}}"></script>
         <![endif]-->
+      
         @include('Frontend.partials.analytics')
 
     </head>
@@ -68,10 +69,7 @@
 
             
 
-            </header>
-            
-
-        </section>
+           
         <!-- end banner -->
         
        @yield('content')
@@ -99,9 +97,9 @@
                     </div>
                 </div>
             </section>
-            <section class="footer-bottom">
+           <section class="footer-bottom">
                 <div class="text-center">
-                    <p>MATX &copy; 2016. ALL RIGHT RESERVED</p>
+                    <p>Apex Triangle &copy; 2018. ALL RIGHT RESERVED</p>
                 </div>
             </section>
         </footer>
@@ -120,6 +118,7 @@
         <script type="text/javascript" src="{{asset('/libs/jwplayer/jwplayer.js')}}"></script>
 
         <script type="text/javascript" src="{{asset('/js/common.js')}}"></script>
+       <script src="{{ asset('js/share.js') }}"></script>
         <script type="text/javascript" src="{{asset('/js/blog.js')}}"></script>
     </body>
 </html>

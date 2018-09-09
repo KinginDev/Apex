@@ -59,14 +59,23 @@ input#image{
               @endif
             <div class="card">
                 <div class="card-body">
-                    <form action="{{route('blog.store')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{route('project.store')}}" method="post" enctype="multipart/form-data">
                        @csrf
                         <div class="form-group">
                             <label for="">Title</label>
-                            <input type="text" name="title" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" value="{{ old('title') }}" required autofocus placeholder="This is My First Blog Post">
+                            <input type="text" name="title" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" value="{{ old('title') }}" required  placeholder="Bow Dynamic Website">
                               @if ($errors->has('title'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('title') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                         <div class="form-group">
+                            <label for="client">Client Name</label>
+                            <input type="text" class="form-control {{ $errors->has('client') ? ' is-invalid' : '' }}" value="{{ old('client') }}" required  name="client" id="client" >
+                              @if ($errors->has('client'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('client') }}</strong>
                                     </span>
                                 @endif
                         </div>
@@ -82,33 +91,37 @@ input#image{
                         </div>
                         <div class="form-group">
                             <label for="Tags">All Related Tags</label>
-                            <input type="text" class="form-control {{ $errors->has('tags') ? ' is-invalid' : '' }}" value="{{ old('tags') }}" required autofocus name="tags[]" id="tags" data-role="tagsinput" size="3">
-                              @if ($errors->has('tags'))
+                            <input type="text" class="form-control {{ $errors->has('tags') ? ' is-invalid' : '' }}" value="{{ old('tags') }}" required  name="tags[]" id="tags" data-role="tagsinput" size="3">
+                            @if ($errors->has('tags'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('tags') }}</strong>
                                     </span>
                                 @endif
                         </div>
-                        <div class="form-group">
-                                 <label for="">Categories</label>
-                               <select name="category" id="" class="form-control  {{ $errors->has('category') ? ' is-invalid' : '' }}" value="{{ old('category') }}" required >
-                                 <option value="">Select A Category</option>
-                                  @foreach($categories as $category)
-                                    <option value="{{$category->id}}">{{$category->name}}</option>
-                                 @endforeach
-                               </select>
-                              @if ($errors->has('category'))
+                         <div class="form-group">
+                            <label for="tools">Tools / Technologies</label>
+                            <input type="text" class="form-control {{ $errors->has('tools') ? ' is-invalid' : '' }}" value="{{ old('tools') }}" required  name="tools[]" id="tools" data-role="tagsinput" size="3">
+                             @if ($errors->has('tools'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('category') }}</strong>
+                                        <strong>{{ $errors->first('tools') }}</strong>
                                     </span>
                                 @endif
                         </div>
                          <div class="form-group">
-                            <label for="">Content</label>
-                             <textarea name="content" id="blog" class="form-control{{ $errors->has('content') ? ' is-invalid' : '' }}" value="{{ old('content') }}"   rows="9" cols="6"></textarea>
-                              @if ($errors->has('content'))
+                            <label for="live_url">Live Url</label>
+                            <input type="text" class="form-control {{ $errors->has('live_url') ? ' is-invalid' : '' }}" value="{{ old('tools') }}" required  name="live_url" id="live_url">
+                             @if ($errors->has('live_url'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('content') }}</strong>
+                                        <strong>{{ $errors->first('live_url') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                         <div class="form-group">
+                            <label for="">Project Information</label>
+                             <textarea name="project_info" class="form-control{{ $errors->has('project_info') ? ' is-invalid' : '' }}" value="{{ old('project_info') }}"   rows="9" cols="6"></textarea>
+                              @if ($errors->has('project_info'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('project_info') }}</strong>
                                     </span>
                                 @endif
                         </div>

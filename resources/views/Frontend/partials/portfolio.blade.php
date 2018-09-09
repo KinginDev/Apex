@@ -17,10 +17,10 @@
                                         <!-- start portfolio filter items -->
                                         <ul class="clearfix portfolio-category mdl-shadow--2dp">
                                             <li class="filter active" data-target="*">ALL</li>
-                                            <li class="filter" data-target=".art">BLOGS</li>
-                                            <li class="filter" data-target=".accessories">ECOMMERCE</li>
-                                            <li class="filter" data-target=".design">COMPANY</li>
-                                            <li class="filter" data-target=".fashon">MUSIC PORTAL</li>
+                                            <li class="filter" data-target=".blog">BLOGS</li>
+                                            <li class="filter" data-target=".ecomerce">ECOMMERCE</li>
+                                            <li class="filter" data-target=".company">COMPANY</li>
+                                            <li class="filter" data-target=".music">MUSIC PORTAL</li>
                                             <li class="filter" data-target=".mobile-apps">MOBILE APPS </li>
                                         </ul>
                                         <!-- end portfolio filter items -->
@@ -31,14 +31,18 @@
                             <div class="row">
                                 <!-- start portfolio items -->
                                 <div class="clearfix protfolio-items">
-
+                                    @foreach($projects as $project)
                                     <!-- start single portfolio item with content pop-up and attachment preview -->
-                                    <div id="portfolio-01" class="col-xxs-6 col-xs-6 col-sm-4 single-portfolio ecommerce">
+                                    <div id="portfolio-01" class="col-xxs-6 col-xs-6 col-sm-4 single-portfolio {{str_replace(',', ' ',$project->tags)}}">
                                         <div class="portfolio-item">
                                             <a href="portfolio/custom-popups/popup-01/preview.html" class="portfolio-custom-popup">
                                                 <!-- start portfolio image -->
                                                 <div class="protfolio-image">
-                                                    <img src="img/portfolio/portfolio1.jpg" alt="portfolio">
+                                                    <?php
+                                                         $image = $project->images->first();
+                                                         //dump($image);
+                                                        ?>
+                                                    <img src="{{$image->url}}" alt="{{$image->name}}">
                                                     
                                                     <!-- .pf-overlay with icon display only portfolio style two -->
                                                     <div class="pf-overlay"><i class="zmdi zmdi-center-focus-strong"></i></div>
@@ -47,152 +51,21 @@
 
                                                 <div class="portfolio-meta">
                                                     <i class="zmdi zmdi-plus-circle"></i>
-                                                    <h3 class="portfolio-title">item name</h3>
+                                                    <h3 class="portfolio-title">{{$project->client}}</h3>
 
                                                     <!-- .portfolio-subtitle show only portfolio style two -->
-                                                    <div class="portfolio-subtitle">Lorem ipsum dolor</div>
+                                                    <div class="portfolio-subtitle">{{ (substr($project->project_info,0,20)) }} </div>
                                                 </div>
                                                 <div class="pf-overlay"></div>
                                             </a>
                                         </div>
                                     </div>
+                                    @endforeach
                                     <!-- end single portfolio item -->
 
-                                    <!-- start single portfolio item with details page ( style 1 ) -->
-                                    <div id="portfolio-02" class="col-xxs-6 col-xs-6 col-sm-4 single-portfolio art design accessories ecommerce">
-                                        <div class="portfolio-item">
-                                            <a href="portfolio/single-pages/portfolio-single-01.html" target="_blank">
+                                   
 
-                                                <!-- start portfolio image -->
-                                                <div class="protfolio-image">
-                                                    <img src="img/portfolio/portfolio2.jpg" alt="portfolio">
-                                                    
-                                                    <!-- .pf-overlay with icon display only portfolio style two -->
-                                                    <div class="pf-overlay"><i class="zmdi zmdi-center-focus-strong"></i></div>
-                                                </div>
-                                                <!-- end portfolio image -->
-
-                                                <div class="portfolio-meta">
-                                                    <i class="zmdi zmdi-plus-circle"></i>
-                                                    <h3 class="portfolio-title">item name</h3>
-
-                                                    <!-- .portfolio-subtitle show only portfolio style two -->
-                                                    <div class="portfolio-subtitle">Lorem ipsum dolor</div>
-                                                </div>
-                                                <div class="pf-overlay"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- end single portfolio item-->
-
-                                    <!-- start single portfolio item with details page ( style 2 ) -->
-                                    <div id="portfolio-03" class="col-xxs-6 col-xs-6 col-sm-4 single-portfolio art fashon ecommerce">
-                                        <div class="portfolio-item">
-                                            <a href="portfolio/single-pages/portfolio-single-02.html" target="_blank">
-
-                                                <!-- start portfolio image -->
-                                                <div class="protfolio-image">
-                                                    <img src="img/portfolio/portfolio3.jpg" alt="portfolio">
-                                                    
-                                                    <!-- .pf-overlay with icon display only portfolio style two -->
-                                                    <div class="pf-overlay"><i class="zmdi zmdi-center-focus-strong"></i></div>
-                                                </div>
-                                                <!-- end portfolio image -->
-
-                                                <div class="portfolio-meta">
-                                                    <i class="zmdi zmdi-plus-circle"></i>
-                                                    <h3 class="portfolio-title">item name</h3>
-
-                                                    <!-- .portfolio-subtitle show only portfolio style two -->
-                                                    <div class="portfolio-subtitle">Lorem ipsum dolor</div>
-                                                </div>
-                                                <div class="pf-overlay"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- end single portfolio item -->
-
-                                    <!-- start single portfolio item with details page ( style 3 ) -->
-                                    <div id="portfolio-04" class="col-xxs-6 col-xs-6 col-sm-4 single-portfolio art accessories fashon">
-                                        <div class="portfolio-item">
-                                            <a href="portfolio/single-pages/portfolio-single-03.html" target="_blank">
-
-                                                <!-- start portfolio image -->
-                                                <div class="protfolio-image">
-                                                    <img src="img/portfolio/portfolio4.jpg" alt="portfolio">
-                                                    
-                                                    <!-- .pf-overlay with icon display only portfolio style two -->
-                                                    <div class="pf-overlay"><i class="zmdi zmdi-center-focus-strong"></i></div>
-                                                </div>
-                                                <!-- end portfolio image -->
-
-                                                <div class="portfolio-meta">
-                                                    <i class="zmdi zmdi-plus-circle"></i>
-                                                    <h3 class="portfolio-title">item name</h3>
-
-                                                    <!-- .portfolio-subtitle show only portfolio style two -->
-                                                    <div class="portfolio-subtitle">Lorem ipsum dolor</div>
-                                                </div>
-                                                <div class="pf-overlay"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- end single portfolio item -->
-
-                                    <!-- start single portfolio item with image pop-up with gallery -->
-                                    <div id="portfolio-05" class="col-xxs-6 col-xs-6 col-sm-4 single-portfolio art accessories">
-                                        <div class="portfolio-item">
-                                            <a href="img/portfolio/popup/portfolio5.jpg" class="portfolio-default-popup">
-
-                                                <!-- start portfolio image -->
-                                                <div class="protfolio-image">
-                                                    <img src="img/portfolio/portfolio5.jpg" alt="portfolio">
-                                                    
-                                                    <!-- .pf-overlay with icon display only portfolio style two -->
-                                                    <div class="pf-overlay"><i class="zmdi zmdi-center-focus-strong"></i></div>
-                                                </div>
-                                                <!-- end portfolio image -->
-
-                                                <div class="portfolio-meta">
-                                                    <i class="zmdi zmdi-plus-circle"></i>
-                                                    <h3 class="portfolio-title">item name</h3>
-
-                                                    <!-- .portfolio-subtitle show only portfolio style two -->
-                                                    <div class="portfolio-subtitle">Lorem ipsum dolor</div>
-                                                </div>
-                                                <div class="pf-overlay"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- end single portfolio item -->
-
-                                    <!-- start single portfolio item with image pop-up with gallery -->
-                                    <div id="portfolio-06" class="col-xxs-6 col-xs-6 col-sm-4 single-portfolio art design">
-                                        <div class="portfolio-item">
-                                            <a href="img/portfolio/popup/portfolio6.jpg" class="portfolio-default-popup">
-
-                                                <!-- start portfolio image -->
-                                                <div class="protfolio-image">
-                                                    <img src="img/portfolio/portfolio6.jpg" alt="portfolio">
-                                                    
-                                                    <!-- .pf-overlay with icon display only portfolio style two -->
-                                                    <div class="pf-overlay"><i class="zmdi zmdi-center-focus-strong"></i></div>
-                                                </div>
-                                                <!-- end portfolio image -->
-
-                                                <div class="portfolio-meta">
-                                                    <i class="zmdi zmdi-plus-circle"></i>
-                                                    <h3 class="portfolio-title">item name</h3>
-
-                                                    <!-- .portfolio-subtitle show only portfolio style two -->
-                                                    <div class="portfolio-subtitle">Lorem ipsum dolor</div>
-                                                </div>
-                                                <div class="pf-overlay"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- end single portfolio item -->
-                                    
+                                   
                                 </div>
                                 <!-- end portfolio items -->
 

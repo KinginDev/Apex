@@ -31,7 +31,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{route('project.index')}}"  class="{{ active('project.index') }}">
               <i class="now-ui-icons ui-1_bell-53"></i>
               <p>Projects</p>
             </a>

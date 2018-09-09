@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class ProjectImage extends Model
 {
     public function project(){
-        $this->hasOne('App\Project');
+      return  $this->belongsTo('App\Project');
     }
 }

@@ -4,12 +4,15 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App/Category;
+use App\Category;
 use App\Project;
 use App\ProjectImage;
+use JD\Cloudder\Facades\Cloudder;
+use Session;
 
 class ProjectsController extends Controller
 {
+    protected $pag_num;
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +20,9 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        return view('Admin.pages.projects.index');
+        $this->pag_num = 20;
+        $projects = Project::with(['images'])->paginate($this->pag_num);
+        return view('Admin.pages.project.index')->with(compact(['projects']));
     }
 
     /**
@@ -28,7 +33,7 @@ class ProjectsController extends Controller
     public function create()
     {
         $categories  = Category::all();
-        return view('Admin.pages.projects.index')->with(compact(['categories']));
+        return view('Admin.pages.project.create')->with(compact(['categories']));
     }
 
     /**
@@ -39,15 +44,20 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate([
+        $request->validate([
+            'project_info' => 'required',
+            'live_url' => 'required',
+            'client' => 'required',
+            'tools' => 'required',
+            'tags' => 'required',
         ]);
         $project = new Project();
-
-        $project->project_info = $request->project_info
+      //  dd($request);
+        $project->project_info = $request->project_info;
         $project->live_url  = $request->live_url;
         $project->client = $request->client;
-        $project->tools = $request->tools;
-        $project->tags = $request->tags;
+        $project->tools = implode(',',$request->tools);
+        $project->tags = implode(',',$request->tags);
 
         $project->save();
         //Images
@@ -61,7 +71,7 @@ class ProjectsController extends Controller
                 $image_url= Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height"=>$height]);
                 //save to uploads directory
                  $image->move(public_path("uploads"), $name);
-                 $this->saveImages($name,$image_url,$blog->id );
+                 $this->saveImages($name,$image_url,$project->id );
              }
              Session::flash('success', 'Project Successfully Uploaded');
             return redirect()->back();
@@ -71,7 +81,7 @@ class ProjectsController extends Controller
     }
       public function saveImages($data, $image_url,$id){
         $image = new ProjectImage();
-        $image->blog_id = $id;
+        $image->project_id = $id;
         $image->name = $data;
         $image->url = $image_url;
         $image->save();
@@ -98,7 +108,6 @@ class ProjectsController extends Controller
     public function edit($id)
     {
         $project = Project::find($id);
-
         return view('Admin.pages.projects.edit')->with(compact('project'));
     }
 
@@ -123,7 +132,7 @@ class ProjectsController extends Controller
     public function destroy($id)
     {
         $blog = Project::find($id)->delete();
-         Session::flash('deleted', 'Project with ID '.$id.' has been sucessfully deleted');
+         Session::flash('success', 'Project with ID '.$id.' has been sucessfully deleted');
          return redirect()->back();
     }
 }

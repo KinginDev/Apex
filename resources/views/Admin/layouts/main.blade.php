@@ -59,32 +59,35 @@
 	              </div>
 	            </form>
 	            <ul class="navbar-nav">
-	              <li class="nav-item">
-	                <a class="nav-link" href="#pablo">
-	                  <i class="now-ui-icons media-2_sound-wave"></i>
-	                  <p>
-	                    <span class="d-lg-none d-md-block">Stats</span>
-	                  </p>
-	                </a>
-	              </li>
 	              <li class="nav-item dropdown">
-	                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                  <i class="now-ui-icons location_world"></i>
+	                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                  <i class="now-ui-icons media-1_album"></i>
 	                  <p>
-	                    <span class="d-lg-none d-md-block">Some Actions</span>
+	                    <span class="d-lg-none d-md-block">Projects</span>
 	                  </p>
 	                </a>
 	                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-	                  <a class="dropdown-item" href="#">Action</a>
-	                  <a class="dropdown-item" href="#">Another action</a>
-	                  <a class="dropdown-item" href="#">Something else here</a>
+	                  <a class="dropdown-item" href="{{route('project.index')}}">Project</a>
+	                  <a class="dropdown-item" href="{{route('project.create')}}">Create NewProject</a>
+	                </div>
+	              </li>
+	              <li class="nav-item dropdown">
+	                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                  <i class="now-ui-icons education_paper"></i>
+	                  <p>
+	                    <span class="d-lg-none d-md-block">Blogs</span>
+	                  </p>
+	                </a>
+	                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+	                  <a class="dropdown-item" href="{{route('blog.index')}}">Blog</a>
+	                  <a class="dropdown-item" href="{{route('blog.create')}}">Create New Blog Post</a>
 	                </div>
 	              </li>
 	              <li class="nav-item">
 	                <a class="nav-link" href="#pablo">
 	                  <i class="now-ui-icons users_single-02"></i>
 	                  <p>
-	                    <span class="d-lg-none d-md-block">Account</span>
+	                    <span class="d-lg-none d-md-block">Administration</span>
 	                  </p>
 	                </a>
 	              </li>
@@ -103,5 +106,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript">	</script>
 	 <script src="{{asset('/admin/js/bootstrap-tagsinput.min.js')}}" type="text/javascript"></script>
 	 <script src="{{asset('/admin/js/my.js')}}" type="text/javascript"></script>
+	  <script src="{{asset('/admin/js/now-ui-dashboard.js')}}" type="text/javascript"></script>
+	  <script src="{{asset('/admin/js/core/bootstrap.min.js')}}" type="text/javascript"></script>
+	  
 </body>
 </html>

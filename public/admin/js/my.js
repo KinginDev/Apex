@@ -22,7 +22,7 @@ function handleFiles() {
 
 /** Tiny MCE Plugin Config**/
 tinymce.init({ 
-    selector:'textarea' ,
+    selector:'textarea#blog' ,
     plugins: 'image code',
     image_title: true,
     automatic_uploads: true,
