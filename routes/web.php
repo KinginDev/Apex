@@ -10,6 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::domain('{subdomain}.apex-triangle.com')->group(function () {
+    Route::get('/request', function ($subdomain= 'quotes') {
+      return view('Frontend.pages.quotes');
+    })->name('quote');
+});
 Route::group(
   [
     'middleware' => [ 'laravelForceHttps' ]
@@ -29,11 +34,7 @@ Route::get('/pay', function(){
 });
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
-Route::domain('{subdomain}.apex-triangle.com')->group(function () {
-    Route::get('/request', function ($subdomain= 'quotes') {
-      return view('Frontend.pages.quotes');
-    })->name('quote');
-});
+
 Route::domain('{subdomain}.apex-triangle.com')->group(function () {
     Route::get('/request', function ($subdomain= 'donation') {
       return view('Frontend.pages.quotes');
