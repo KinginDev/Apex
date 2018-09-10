@@ -24,7 +24,7 @@
                             <li><a href="{{route('index.blog')}}">Blog </a></li>
                         </ul>
                     </li>
-                    <li><a href="https://quote.apex-triangle.com/request">Request For A Quote</a></li>
+                    <li><a href="{{route('quote')}}">Request For A Quote</a></li>
                     <li><a href="#contact" data-target="#contact" class="menu-smooth-scroll">contact</a></li>
                 </ul>
             </nav>
@@ -58,7 +58,7 @@
                 <li><a href="#team" data-target="#team" class="menu-smooth-scroll">Team</a></li>
                 <li><a href="#blog" data-target="#blog" class="menu-smooth-scroll">Blog</a></li>
                 <li><a href="#contact" data-target="#contact" class="menu-smooth-scroll">contact</a></li>
-                <li><a href="https://quote.apex-triangle.com/request"  >Request For Quote</a></li>
+                <li><a href="{{route('quote')}}"  >Request For Quote</a></li>
 
              </ul>
              

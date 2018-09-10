@@ -119,7 +119,7 @@
                                     data-responsive_offset="on"
                                     data-responsive="off"
                                     style="z-index: 9; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; text-align:center;">
-                                        <a href="https://quote.apex-triangle.com/request" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-lg btn-white btn-default tp-resizeme rs-parallaxlevel-0" style="margin-left: -20px;">Request For a Quote</a>
+                                        <a href="{{route('quote')}} class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-lg btn-white btn-default tp-resizeme rs-parallaxlevel-0" style="margin-left: -20px;">Request For a Quote</a>
 
                                         <a href="#portfolio" data-target="#about" class="menu-smooth-scroll mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-lg btn-highlight btn-default tp-resizeme rs-parallaxlevel-0">View Our Portfolio</a>
                                 </div>
@@ -208,7 +208,7 @@
                                     data-responsive_offset="on"
                                     style="z-index: 3; white-space: nowrap;">
 
-                                    <a href="https://quote.apex-triangle.com/request" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-lg btn-highlight btn-default tp-resizeme rs-parallaxlevel-0">Love it? Ask for yours</a>
+                                    <a href="{{route('quote')}}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-lg btn-highlight btn-default tp-resizeme rs-parallaxlevel-0">Love it? Ask for yours</a>
                                 </div>
 
                                 <!-- LAYER NR. 5 -->
@@ -348,7 +348,7 @@
                                     data-splitin="none"
                                     data-splitout="none"
                                     data-responsive_offset="on" style="z-index: 3; white-space: nowrap;">
-                                    <a href="https://quote.apex-triangle.com/request" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-highlight btn-lg btn-default tp-resizeme rs-parallaxlevel-0">Request For a Quote</a>
+                                    <a href="{{route('quote')}}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-highlight btn-lg btn-default tp-resizeme rs-parallaxlevel-0">Request For a Quote</a>
                                 </div>
                             </li>
 
