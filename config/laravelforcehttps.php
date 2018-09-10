@@ -12,7 +12,7 @@ return [
     | will be redirected to https
     |
     */
-    'always_force_https' => true,
+    'always_force_https' => false,
 
     /*
     |--------------------------------------------------------------------------
