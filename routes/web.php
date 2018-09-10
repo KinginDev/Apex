@@ -28,7 +28,7 @@ Route::domain('{subdomain}.apex-triangle.com')->group(function () {
  
     Route::get('/request', function ($subdomain= 'quotes') {
       return view('Frontend.pages.quotes');
-    })->name('quotes');
+    })->name('quote');
 });
 Route::prefix('admin')->group(function(){
     Route::prefix('auth')->group(function(){
