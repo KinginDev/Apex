@@ -18,7 +18,7 @@
                                 <h2 class="section-title">If You Can Think It we Can Build it</h2>
                                 <p>Do you have your dream website or moblie app stuck on your head? Great beacuse you are the right place. </p>
                                 <p>At Apex Tiangle We help you build your dream with a little touch of Taste and Elegance. Be a part of our ever growing community of clients.</p>
-                                <a href="https://quote.apex-triangle.com/request" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-default btn-highlight">Request For A Quote</a>
+                                <a href="{{route('quote')}}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-default btn-highlight">Request For A Quote</a>
                             </div>
                         </div>
                     </div>

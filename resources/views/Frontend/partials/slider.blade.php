@@ -119,7 +119,7 @@
                                     data-responsive_offset="on"
                                     data-responsive="off"
                                     style="z-index: 9; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; text-align:center;">
-                                        <a href="{{route('quote')}} class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-lg btn-white btn-default tp-resizeme rs-parallaxlevel-0" style="margin-left: -20px;">Request For a Quote</a>
+                                        <a href="{{route('quote')}}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-lg btn-white btn-default tp-resizeme rs-parallaxlevel-0" style="margin-left: -20px;">Request For a Quote</a>
 
                                         <a href="#portfolio" data-target="#about" class="menu-smooth-scroll mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-lg btn-highlight btn-default tp-resizeme rs-parallaxlevel-0">View Our Portfolio</a>
                                 </div>
