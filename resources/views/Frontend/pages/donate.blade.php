@@ -19,7 +19,7 @@
                                 <!-- start team slider -->
                                 <div class="styled-paginantion colorsch-white" data-action="teamSlider">
                                 	<div class="col-md-4"></div>
-                                    <div class="col-md-4 col-offset-md-4">
+                                    <div class="col-md-6">
                                     	 
                                         <div class="team-member tm-edition3">
                                             <!-- start team member image -->
