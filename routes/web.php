@@ -16,7 +16,15 @@ Route::get('/', 'HomeController@index');
 Route::get('/blog', 'BlogController@index')->name('index.blog');
 Route::get('/blog/show/{slug}', 'BlogController@show')->name('show.blog');
 Route::get('project/show/{id}', 'ProjectController@show')->name('show.project');
-
+Route::get('/quotes', function(){
+  return view('Frontend.pages.quotes');
+});
+Route::domain('{subdomain}.apex-triangle.com')->group(function () {
+ 
+    Route::get('/request', function ($subdomain= 'quotes') {
+      return view('Frontend.pages.quotes');
+    });
+});
 Route::prefix('admin')->group(function(){
     Route::prefix('auth')->group(function(){
       //Show the login form
