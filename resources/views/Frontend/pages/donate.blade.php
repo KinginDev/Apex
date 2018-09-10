@@ -9,8 +9,8 @@
 
                         <!-- start section title -->
                         <div class="text-center section-heading">
-                            <h2 class="section-title">OUR TEAM</h2>
-                            <h3 class="section-subtitle">Always strive for better work. Never stop</h3>
+                            <h2 class="section-title">Buy us a Cup of Coffe</h2>
+                            <h3 class="section-subtitle">Donate to our cause</h3>
                         </div>
                         <!-- end section title -->
 
@@ -31,7 +31,7 @@
 										            <p>
 										                <div>
 										                    Apex Triangle Donation
-										                    ₦ 2,950
+										                   
 										                </div>
 										            </p>
 										            <input type="hidden" name="email" value="otemuyiwa@gmail.com"> {{-- required --}}
