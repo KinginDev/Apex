@@ -7,6 +7,11 @@ use Paystack;
 use App\Donation;
 class PaymentController extends Controller
 {
+    public function view(){
+        $donate = Donation::all();
+      return view('Frontend.pages.donate')->with(compact('donate'));
+    }
+    
     public function redirectToGateway($value='')
     {
     	return Paystack::getAuthorizationUrl()->redirectNow();
@@ -18,13 +23,14 @@ class PaymentController extends Controller
     public function handleGatewayCallback()
     {
         $paymentDetails = Paystack::getPaymentData();
-
-        dd($paymentDetails);
-        $amount =new Donation();
+       
+                $amount =new Donation();
+                $amount->email = $paymentDetails->data->customer->email;
+                $amount->amount = $paymentDetails->data->amount;
+                $amount->save();
+                Session::flash('success', 'Payment successfully made thank you for dropping by!')
+                return redirect(route('pay.view'));
         
-        $amount->email = $paymentDetails;
-        $amount->amount = $paymentDetails;
-        $amount->save();
         // Now you have the payment details,
         // you can store the authorization_code in your db to allow for recurrent subscriptions
         // you can then redirect or do whatever you want

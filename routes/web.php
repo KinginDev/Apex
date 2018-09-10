@@ -25,9 +25,7 @@ Route::get('project/show/{id}', 'ProjectController@show')->name('show.project');
 Route::get('/quotes', function(){
   return view('Frontend.pages.quotes');
 })->name('quote');
-Route::get('/pay', function(){
-  return view('Frontend.pages.donate');
-});
+Route::get('/pay','PaymentController@view')->name('pay.view');
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 

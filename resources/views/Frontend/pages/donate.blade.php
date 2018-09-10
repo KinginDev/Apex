@@ -26,6 +26,35 @@
                                             <div class="member-img">
                                               
                                             </div>
+                                             @if (Session::has('success'))
+
+                                              <div class="alert alert-success alert-dismissable">
+                                                <strong>Success: {{Session::get('success') }}</strong>
+                                              </div>
+
+                                              @endif
+                                               <ul class="progress-bar-wrap" data-action="progress-bar">
+                                            <?php
+                                                   $sum = 0;
+                                                   foreach($donate as $pay){
+                                                      $sum += $pay->amount;
+                                                     
+                                                   }
+                                                     echo $sum;
+                                                ?>
+                                        <!-- start skill progress bar -->
+                                        <li class="narrow progress-bar-inner">
+                                            <!-- skill title -->
+                                            <span class="progress-bar-label">Goal ($10,000)</span>
+                                            <div class="progress-bar">
+                                                <!-- skill level-->
+                                                <div class="progress-bar-L1" data-width="85%">
+                                                    <div class="progress-conunt"><span>85%</span></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <!-- end skill progress bar -->
+                                            </ul>
                                             <form method="POST" action="{{ route('pay') }}" accept-charset="UTF-8" class="matx-form-valid contact-form" role="form">
                                             <div class="text-center " style="height: 300px;">
 										            <p>
