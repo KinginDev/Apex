@@ -12,6 +12,7 @@
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
         "league/flysystem-aws-s3-v3": "^1.0",
+        "unicodeveloper/laravel-paystack": "^1.0",
         "watson/active": "^2.0",
         "yaroslawww/laravel-force-https": "^1.1"
     },

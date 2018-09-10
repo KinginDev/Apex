@@ -24,11 +24,18 @@ Route::get('project/show/{id}', 'ProjectController@show')->name('show.project');
 Route::get('/quotes', function(){
   return view('Frontend.pages.quotes');
 });
+Route::get('/pay', function(){
+  return view('Frontend.pages.donate');
+});
+
 Route::domain('{subdomain}.apex-triangle.com')->group(function () {
- 
     Route::get('/request', function ($subdomain= 'quotes') {
       return view('Frontend.pages.quotes');
     })->name('quote');
+});
+Route::domain('{subdomain}.apex-triangle.com')->group(function () {
+   Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
+   Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 });
 Route::prefix('admin')->group(function(){
     Route::prefix('auth')->group(function(){

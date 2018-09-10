@@ -74,7 +74,7 @@
 
                                 <!-- start portfolio load more button -->
                                 <div class="text-center load-portfolio wow fadeInUpSmall" data-wow-duration="1s">
-                                    <button data-action="portfolioLoadItem" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-default btn-highlight">LOAD MORE</button>
+                                    <a href="{{route('index.blog')}}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-default btn-highlight">LOAD MORE</a>
                                 </div>
                                 <!-- end portfolio load more button -->
                                 
