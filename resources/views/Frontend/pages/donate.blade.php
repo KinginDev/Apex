@@ -34,8 +34,11 @@
 										                   
 										                </div>
 										            </p>
-										            <input type="hidden" name="email" value="otemuyiwa@gmail.com"> {{-- required --}}
-										            <input type="hidden" name="orderID" value="345">
+										            <div class="mdl-textfield mdl-js-textfield">
+		                                                <input type="email" class="mdl-textfield__input" name="email" value="800"> {{-- required in kobo --}}
+		                                                <label class="mdl-textfield__label" for="email">Email</label>
+		                                            </div> {{-- required --}}
+										            
 										             <div class="mdl-textfield mdl-js-textfield">
 		                                                <input type="text" class="mdl-textfield__input" name="amount" value="800"> {{-- required in kobo --}}
 		                                                <label class="mdl-textfield__label" for="name">Amount</label>
