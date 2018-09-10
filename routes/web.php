@@ -33,7 +33,7 @@ Route::domain('{subdomain}.apex-triangle.com')->group(function () {
       return view('Frontend.pages.quotes');
     })->name('quote');
 });
-Route::domain('{subdomain}.apex-triangle.com')->group(function () {
+Route::domain('{subdomain}.apex-triangle.com')->group(function ($subdomain= 'donate') {
    Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
    Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 });
