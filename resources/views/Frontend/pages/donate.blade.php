@@ -17,11 +17,11 @@
                         <div class="ov-hidden-padding">
                             <div class="row">
                                 <!-- start team slider -->
-                                <div class="styled-paginantion colorsch-white" data-action="teamSlider">
+                                <div class="styled-paginantion colorsch-white" >
                                 	<div class="col-md-4"></div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                     	 
-                                        <div class="team-member tm-edition3">
+                                        <div class="team-member tm-edition3" style="padding: 20px;">
                                             <!-- start team member image -->
                                             <div class="member-img">
                                               
