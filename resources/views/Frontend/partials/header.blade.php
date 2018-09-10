@@ -2,9 +2,9 @@
         <header class="main-header init-animation">
 
             <!-- start desktop logo -->
-            <a href="index.html" class="logos matx-logo logo-initial init-animation">
-                <img class="logo-dark" src="img/logo/57x57.png" alt="logo">
-                <img class="logo-lite" src="img/logo/60x76.png" alt="logo">
+            <a href="/" class="logos matx-logo logo-initial init-animation">
+                <img class="logo-dark" src="/img/logo/57x57.png" alt="logo">
+                <img class="logo-lite" src="/img/logo/60x76.png" alt="logo">
             </a>
             <!-- end desktop logo -->
 
@@ -31,8 +31,8 @@
             <!-- end desktop nav -->
 
             <!-- start mobile logo -->
-            <a href="index.html" class="logo matx-logo mobile-logo">
-                <img src="img/logo_lite.png" alt="logo">
+            <a href="/" class="logo matx-logo mobile-logo">
+                <img src="/img/logo/60x76.png" alt="logo">
             </a>
             <!-- end mobile logo -->
 
