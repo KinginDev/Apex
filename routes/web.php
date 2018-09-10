@@ -15,6 +15,7 @@
 Route::get('/', 'HomeController@index');
 Route::get('/blog', 'BlogController@index')->name('index.blog');
 Route::get('/blog/show/{slug}', 'BlogController@show')->name('show.blog');
+Route::get('project/show/{id}', 'ProjectController@show')->name('show.project');
 
 Route::prefix('admin')->group(function(){
     Route::prefix('auth')->group(function(){
@@ -26,7 +27,7 @@ Route::prefix('admin')->group(function(){
       Route::any('/logout/', 'Auth\AdminLoginController@logout')->name('admin.logout');
     });
     
-    Route::prefix('dashboard')->group(function(){
+    Route::prefix('dashboard')->middleware('auth:admin')->group(function(){
        Route::get('/', 'Admin\Controller@dashboard')->name('admin.dashboard'); 
         
         //Blog Resource

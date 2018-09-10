@@ -35,7 +35,7 @@
                                     <!-- start single portfolio item with content pop-up and attachment preview -->
                                     <div id="portfolio-01" class="col-xxs-6 col-xs-6 col-sm-4 single-portfolio {{str_replace(',', ' ',$project->tags)}}">
                                         <div class="portfolio-item">
-                                            <a href="portfolio/custom-popups/popup-01/preview.html" class="portfolio-custom-popup">
+                                            <a href="{{route('show.project', $project->id)}}" >
                                                 <!-- start portfolio image -->
                                                 <div class="protfolio-image">
                                                     <?php
