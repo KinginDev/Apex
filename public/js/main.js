@@ -281,28 +281,25 @@ $(document).ready(function($){
 
 	}());
 
+ $('.mailchimpForm').submit(function(e){
+     	e.preventDefault();
 
-	$('.mailchimpForm').ajaxChimp({
-
-		callback: function(resp) {
-
-			if (resp.result === 'success') {
-
-				$('.mailchimpForm .mdl-textfield').removeClass('is-dirty').find('input[type=text]').val('');
-				swal("Thanks!", "Almost finished... Please confirm your email address.", "success");
-
-			} else if(resp.result === 'error') {
-
-				swal("Ops!", "Please enter a valid email address.", "error");
-
-			}
-
-		},
-
-		url: "https://coderpixel.us10.list-manage.com/subscribe/post?u=3918a7d4d5fe9e4c1baa3d912&amp;id=1a52016f23" //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".  
-
-	});
-
+     var $this = $(this);
+     var email = $this.find('#nl_email');
+     var token = ' 5021eaabc90a7be9730cd4518f2622e7';
+     var listKey = 'b01c7ceef72d47cd68fa34e0d9574bb3ab648345a53c35c2'
+     e.preventDefault();
+     $.ajax({
+        url: "https://campaigns.zoho.com/api/addlistsubscribersinbulk?authtoken="+token+"&scope=CampaignsAPI&listkey="+listKey+"&resfmt=JSON&emailids="+ email+'"',
+        method: 'POST',
+        type: 'json',
+        success: function(response){
+            swal("Thanks!", "You have been successfully added to our mailing list!", "success");
+            email.val = '';
+        }
+    });
+ })
+	
 
 	// Contact Form
 	$('#contactForm').on('submit', function(e){

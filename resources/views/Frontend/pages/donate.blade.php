@@ -64,12 +64,12 @@
 										                </div>
 										            </p>
 										            <div class="mdl-textfield mdl-js-textfield">
-		                                                <input type="email" class="mdl-textfield__input" name="email" value="800"> {{-- required in kobo --}}
+		                                                <input type="email" class="mdl-textfield__input" name="email" value=""> {{-- required in kobo --}}
 		                                                <label class="mdl-textfield__label" for="email">Email</label>
 		                                            </div> {{-- required --}}
 										            
 										             <div class="mdl-textfield mdl-js-textfield">
-		                                                <input type="text" class="mdl-textfield__input" name="amount" value="800"> {{-- required in kobo --}}
+		                                                <input type="text" class="mdl-textfield__input" name="amount" value=""> {{-- required in kobo --}}
 		                                                <label class="mdl-textfield__label" for="name">Amount</label>
 		                                            </div>
 										           

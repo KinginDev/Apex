@@ -75,7 +75,7 @@
                 <!-- end blog post section -->
 
                 <!-- start newsletter section -->
-                {{-- <section class="newsletter overflow-hidden">
+                <section class="newsletter overflow-hidden">
                     <div class="bg-image newsletter-bg" data-center="transform: translate3d(0px, -50%, 0px)" data-top-bottom="transform: translate3d(0px, -25%, 0px)" data-bottom-top="transform: translate3d(0px, -75%, 0px)"></div>
                     <div class="overlay overlay-five">
                         <div class="section-common-space">
@@ -99,7 +99,7 @@
                             </div>
                         </div>
                     </div>
-                </section> --}}
+                </section> 
                 <!-- end newsletter section -->
 
             </section>
