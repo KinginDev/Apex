@@ -18,20 +18,20 @@ Route::group(
   function()
   {
 
-Route::get('/', 'HomeController@index');
-Route::get('/blog', 'BlogController@index')->name('index.blog');
-Route::get('/blog/show/{slug}', 'BlogController@show')->name('show.blog');
-Route::get('project/show/{id}', 'ProjectController@show')->name('show.project');
-Route::get('/quotes', function(){
-  return view('Frontend.pages.quotes');
-})->name('quote');
-Route::get('/pay', function(){
-  return view('Frontend.pages.donate');
+  Route::get('/', 'HomeController@index');
+  Route::get('/blog', 'BlogController@index')->name('index.blog');
+  Route::get('/blog/show/{slug}', 'BlogController@show')->name('show.blog');
+  Route::get('project/show/{id}', 'ProjectController@show')->name('show.project');
+  Route::get('/quotes', function(){
+    return view('Frontend.pages.quotes');
+  })->name('quote');
+  Route::get('/pay', function(){
+    return view('Frontend.pages.donate');
+  });
+  Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
+  Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 });
-Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
-Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
-
-Route::prefix('admin')->group(function(){
+Route::domain('admin.apex-triangle.com')->group(function(){
     Route::prefix('auth')->group(function(){
       //Show the login form
       Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.show.login');
@@ -51,5 +51,4 @@ Route::prefix('admin')->group(function(){
        // Project Resource
         Route::resource('/project', 'Admin\ProjectsController');
     });
-});
 });
