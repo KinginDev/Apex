@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -26,7 +27,7 @@
         <link rel="stylesheet" href="{{secure_asset('/libs/mdl/material.min.css')}}">
         <link rel="stylesheet" href="{{secure_asset('/css/animate.min.css')}}">
         <link rel="stylesheet" href="{{secure_asset('/libs/owl-carousel/owl.carousel.css')}}">
-        <link rel="stylesheet" href="{{secure_asset('/libs/owl-carousel/owl.theme.css"')}}>
+        <link rel="stylesheet" href="{{secure_asset('/libs/owl-carousel/owl.theme.css')}}">
         <link rel="stylesheet" href="{{secure_asset('/libs/owl-carousel/owl.transitions.css')}}">
 
         <link rel="stylesheet" href="{{secure_asset('/css/common.css')}}"> 
@@ -116,5 +117,16 @@
 
         <script type="text/javascript" src="{{secure_asset('/js/common.js')}}"></script>
         <script type="text/javascript" src="{{secure_asset('/js/blog.js')}}"></script>
-    </body>
+        <!-- Hotjar Tracking Code for https://www.apex-triangle.com -->
+            <script>
+                (function(h,o,t,j,a,r){
+                    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                    h._hjSettings={hjid:1009598,hjsv:6};
+                    a=o.getElementsByTagName('head')[0];
+                    r=o.createElement('script');r.async=1;
+                    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                    a.appendChild(r);
+                })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+            </script>
+        
 </html>
