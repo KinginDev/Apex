@@ -15,8 +15,9 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::paginate(20);
-       
-        return view('Frontend.pages.blog.blog-standard')->with(compact('blogs'));
+       $latest = Blog::take(5)->latest()->get();
+        $categories = Category::take(5)->get();
+        return view('Frontend.pages.blog.blog-standard')->with(compact(['categories','latest','blogs']));
     }
 
     /**
