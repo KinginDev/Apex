@@ -14,44 +14,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <link rel="shortcut icon" href="{{asset('img//logo/57x57.png')}}">
+        <link rel="shortcut icon" href="{{secure_asset('img//logo/57x57.png')}}">
 
     
         <!-- Google Fonts -->
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700italic,700,500italic,900' rel='stylesheet' type='text/css'>
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="{{asset('/libs/material-design-iconic-font/css/material-design-iconic-font.min.css')}}">
-        <link rel="stylesheet" href="{{asset('/libs/bootstrap/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{asset('/libs/mdl/material.min.css')}}">
-        <link rel="stylesheet" href="{{asset('/css/animate.min.css')}}">
-        <link rel="stylesheet" href="{{asset('/libs/owl-carousel/owl.carousel.css')}}">
-        <link rel="stylesheet" href="{{asset('/libs/owl-carousel/owl.theme.css"')}}>
-        <link rel="stylesheet" href="{{asset('/libs/owl-carousel/owl.transitions.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/libs/material-design-iconic-font/css/material-design-iconic-font.min.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/libs/bootstrap/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/libs/mdl/material.min.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/css/animate.min.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/libs/owl-carousel/owl.carousel.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/libs/owl-carousel/owl.theme.css"')}}>
+        <link rel="stylesheet" href="{{secure_asset('/libs/owl-carousel/owl.transitions.css')}}">
 
-        <link rel="stylesheet" href="{{asset('/css/common.css')}}"> 
-        <link rel="stylesheet" href="{{asset('/css/blog.css')}}">
-        <link rel="stylesheet" href="{{asset('/css/portfolio.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/css/common.css')}}"> 
+        <link rel="stylesheet" href="{{secure_asset('/css/blog.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/css/portfolio.css')}}">
         
-        <link rel="stylesheet" href="{{asset('/css/responsive.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/css/responsive.css')}}">
 
         <!-- Other Color Schemes -->
-        <!-- <link rel="stylesheet" href="../../assets/css/color-cyan.css"> -->
-        <!-- <link rel="stylesheet" href="../../assets/css/color-indigo.css"> -->
-        <!-- <link rel="stylesheet" href="../../assets/css/color-deep-purple.css"> -->
-        <!-- <link rel="stylesheet" href="../../assets/css/color-pink.css"> -->
-        <!-- <link rel="stylesheet" href="../../assets/css/color-blue.css"> -->
-        <!-- <link rel="stylesheet" href="../../assets/css/color-green.css"> -->
-        <!-- <link rel="stylesheet" href="../../assets/css/color-deep-orange.css"> -->
-        <!-- <link rel="stylesheet" href="../../assets/css/color-blue-grey.css"> -->
-        <!-- <link rel="stylesheet" href="../../assets/css/color-teal.css"> -->
-        <!-- <link rel="stylesheet" href="../../assets/css/color-purple.css"> -->
-        <!-- <link rel="stylesheet" href="../../assets/css/color-light-green.css"> -->
+        <!-- <link rel="stylesheet" href="../../secure_assets/css/color-cyan.css"> -->
+        <!-- <link rel="stylesheet" href="../../secure_assets/css/color-indigo.css"> -->
+        <!-- <link rel="stylesheet" href="../../secure_assets/css/color-deep-purple.css"> -->
+        <!-- <link rel="stylesheet" href="../../secure_assets/css/color-pink.css"> -->
+        <!-- <link rel="stylesheet" href="../../secure_assets/css/color-blue.css"> -->
+        <!-- <link rel="stylesheet" href="../../secure_assets/css/color-green.css"> -->
+        <!-- <link rel="stylesheet" href="../../secure_assets/css/color-deep-orange.css"> -->
+        <!-- <link rel="stylesheet" href="../../secure_assets/css/color-blue-grey.css"> -->
+        <!-- <link rel="stylesheet" href="../../secure_assets/css/color-teal.css"> -->
+        <!-- <link rel="stylesheet" href="../../secure_assets/css/color-purple.css"> -->
+        <!-- <link rel="stylesheet" href="../../secure_assets/css/color-light-green.css"> -->
 
         <!-- Header Scripts -->
 
         <!--[if lt IE 9]>
-            <script src="../../assets/js/vendor/html5shiv.js"></script>
+            <script src="../../secure_assets/js/vendor/html5shiv.js"></script>
         <![endif]-->
 
     </head>
@@ -108,13 +108,13 @@
             <i class="zmdi zmdi-chevron-up"></i>
         </button>
         
-        <script>window.jQuery || document.write('<script type="text/javascript" src="{{asset('/js/vendor/jquery-1.10.2.min.js')}}"><\/script>')</script>
-        <script type="text/javascript" src="{{asset('/libs/mdl/material.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/js/common-plugins.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/libs/owl-carousel/owl.carousel.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/libs/jwplayer/jwplayer.js')}}"></script>
+        <script>window.jQuery || document.write('<script type="text/javascript" src="{{secure_asset('/js/vendor/jquery-1.10.2.min.js')}}"><\/script>')</script>
+        <script type="text/javascript" src="{{secure_asset('/libs/mdl/material.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/js/common-plugins.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/owl-carousel/owl.carousel.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/jwplayer/jwplayer.js')}}"></script>
 
-        <script type="text/javascript" src="{{asset('/js/common.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/js/blog.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/js/common.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/js/blog.js')}}"></script>
     </body>
 </html>

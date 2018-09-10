@@ -10,7 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::group(
+  [
+    'middleware' => [ 'laravelForceHttps' ]
+  ],
+  function()
+  {
 
 Route::get('/', 'HomeController@index');
 Route::get('/blog', 'BlogController@index')->name('index.blog');
@@ -45,4 +50,5 @@ Route::prefix('admin')->group(function(){
        // Project Resource
         Route::resource('/project', 'Admin\ProjectsController');
     });
+});
 });

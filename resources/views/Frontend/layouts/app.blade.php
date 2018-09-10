@@ -15,56 +15,56 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <link rel="shortcut icon" href="{{asset('img//logo/57x57.png')}}">
+        <link rel="shortcut icon" href="{{secure_asset('img//logo/57x57.png')}}">
 
         <!-- Google Fonts -->
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700italic,700,500italic,900' rel='stylesheet' type='text/css'>
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="{{asset('/libs/material-design-iconic-font/css/material-design-iconic-font.min.css')}}">
-        <link rel="stylesheet" href="{{asset('/libs/bootstrap/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{asset('/libs/mdl/material.min.css')}}">
-        <link rel="stylesheet" href="{{asset('/css/animate.min.css')}}">
-        <link rel="stylesheet" href="{{asset('/libs/owl-carousel/owl.carousel.css')}}">
-        <link rel="stylesheet" href="{{asset('/libs/owl-carousel/owl.theme.css')}}">
-        <link rel="stylesheet" href="{{asset('/libs/owl-carousel/owl.transitions.css')}}">
-        <link rel="stylesheet" href="{{asset('/libs/magnific-popup/magnific-popup.css')}}">
-        <link rel="stylesheet" href="{{asset('/libs/sweetalert/sweet-alert.min.css')}}">
-        <link rel="stylesheet" href="{{asset('/libs/sweetalert/ie9.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/libs/material-design-iconic-font/css/material-design-iconic-font.min.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/libs/bootstrap/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/libs/mdl/material.min.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/css/animate.min.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/libs/owl-carousel/owl.carousel.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/libs/owl-carousel/owl.theme.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/libs/owl-carousel/owl.transitions.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/libs/magnific-popup/magnific-popup.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/libs/sweetalert/sweet-alert.min.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/libs/sweetalert/ie9.css')}}">
 
-        <link rel="stylesheet" href="{{asset('/css/common.css')}}">
-        <link rel="stylesheet" href="{{asset('/css/main.css')}}">
-        <link rel="stylesheet" href="{{asset('/css/responsive.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/css/common.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/css/main.css')}}">
+        <link rel="stylesheet" href="{{secure_asset('/css/responsive.css')}}">
 
         <!-- Other Color Schemes -->
-         {{-- <link rel="stylesheet" href="{{asset('/css/color-cyan.css')}}">  --}}
-        <!-- <link rel="stylesheet" href="{{asset('/css/color-indigo.css')}}"> -->
-        <!-- <link rel="stylesheet" href="{{asset('/css/color-deep-purple.css')}}"> -->
-        <!-- <link rel="stylesheet" href="{{asset('/css/color-pink.css')}}"> -->
-        <!-- <link rel="stylesheet" href="{{asset('/css/color-blue.css')}}"> -->
-        <!-- <link rel="stylesheet" href="{{asset('/css/color-green.css')}}"> -->
-        <!-- <link rel="stylesheet" href="{{asset('/css/color-deep-orange.css')}}"> -->
-        <!-- <link rel="stylesheet" href="{{asset('/css/color-blue-grey.css')}}"> -->
-        <!-- <link rel="stylesheet" href="{{asset('/css/color-teal.css')}}"> -->
-        <!-- <link rel="stylesheet" href="{{asset('/css/color-purple.css')}}"> -->
-        <!-- <link rel="stylesheet" href="{{asset('/css/color-light-green.css')}}"> -->
+         {{-- <link rel="stylesheet" href="{{secure_asset('/css/color-cyan.css')}}">  --}}
+        <!-- <link rel="stylesheet" href="{{secure_asset('/css/color-indigo.css')}}"> -->
+        <!-- <link rel="stylesheet" href="{{secure_asset('/css/color-deep-purple.css')}}"> -->
+        <!-- <link rel="stylesheet" href="{{secure_asset('/css/color-pink.css')}}"> -->
+        <!-- <link rel="stylesheet" href="{{secure_asset('/css/color-blue.css')}}"> -->
+        <!-- <link rel="stylesheet" href="{{secure_asset('/css/color-green.css')}}"> -->
+        <!-- <link rel="stylesheet" href="{{secure_asset('/css/color-deep-orange.css')}}"> -->
+        <!-- <link rel="stylesheet" href="{{secure_asset('/css/color-blue-grey.css')}}"> -->
+        <!-- <link rel="stylesheet" href="{{secure_asset('/css/color-teal.css')}}"> -->
+        <!-- <link rel="stylesheet" href="{{secure_asset('/css/color-purple.css')}}"> -->
+        <!-- <link rel="stylesheet" href="{{secure_asset('/css/color-light-green.css')}}"> -->
 
-        <link rel="stylesheet" type="text/css" href="{{asset('/libs/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{asset('/libs/revolution/fonts/font-awesome/css/font-awesome.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{secure_asset('/libs/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{secure_asset('/libs/revolution/fonts/font-awesome/css/font-awesome.min.css')}}">
 
         <!-- REVOLUTION STYLE SHEETS -->
-        <link rel="stylesheet" type="text/css" href="{{asset('/libs/revolution/css/settings.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{secure_asset('/libs/revolution/css/settings.css')}}">
         <!-- REVOLUTION LAYERS STYLES -->
-        <link rel="stylesheet" type="text/css" href="{{asset('/libs/revolution/css/layers.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{secure_asset('/libs/revolution/css/layers.css')}}">
 
         <!-- REVOLUTION NAVIGATION STYLES -->
-        <link rel="stylesheet" type="text/css" href="{{asset('/libs/revolution/css/navigation.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{secure_asset('/libs/revolution/css/navigation.css')}}">
 
         <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
 
         <!-- Header Scripts -->
         <!--[if lt IE 9]>
-            <script src="{{asset('/js/vendor/html5shiv.js')}}"></script>
+            <script src="{{secure_asset('/js/vendor/html5shiv.js')}}"></script>
         <![endif]-->
         @include('Frontend.partials.analytics')
 
@@ -98,7 +98,7 @@
         </button>
 
         <!-- footer script start  -->
-        <script>window.jQuery || document.write('<script type="text/javascript" src="{{asset('/js/vendor/jquery-1.10.2.min.js')}}"><\/script>')</script>
+        <script>window.jQuery || document.write('<script type="text/javascript" src="{{secure_asset('/js/vendor/jquery-1.10.2.min.js')}}"><\/script>')</script>
        <script>
            $.ajaxSetup({
             headers: {
@@ -108,31 +108,31 @@
        </script>{{-- 
         <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=YOUR_GOOGLE_MAP_API_KEY"></script> --}}
      {{--    <script type="text/javascript" src="//platform.twitter.com/widgets.js')}}"></script> --}}
-        <script type="text/javascript" src="{{asset('/libs/mdl/material.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/js/all-plugins.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/js/common-plugins.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/libs/owl-carousel/owl.carousel.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/libs/sweetalert/sweet-alert.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/libs/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/libs/jwplayer/jwplayer.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/mdl/material.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/js/all-plugins.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/js/common-plugins.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/owl-carousel/owl.carousel.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/sweetalert/sweet-alert.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/jwplayer/jwplayer.js')}}"></script>
 
 
                     <!-- REVOLUTION JS FILES -->
-        <script type="text/javascript" src="{{asset('/libs/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/libs/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
 
-        <script type="text/javascript" src="{{asset('/libs/revolution/js/extensions/revolution.extension.actions.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/libs/revolution/js/extensions/revolution.extension.carousel.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/libs/revolution/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/libs/revolution/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/libs/revolution/js/extensions/revolution.extension.migration.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/libs/revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/libs/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/libs/revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/libs/revolution/js/extensions/revolution.extension.video.min.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/js/common.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/js/all-components.js')}}"></script>
-        <script type="text/javascript" src="{{asset('/js/main.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/revolution/js/extensions/revolution.extension.actions.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/revolution/js/extensions/revolution.extension.carousel.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/revolution/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/revolution/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/revolution/js/extensions/revolution.extension.migration.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/libs/revolution/js/extensions/revolution.extension.video.min.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/js/common.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/js/all-components.js')}}"></script>
+        <script type="text/javascript" src="{{secure_asset('/js/main.js')}}"></script>
 
     </body>
 </html>
