@@ -24,7 +24,7 @@ class PaymentController extends Controller
     {
         $paymentDetails = Paystack::getPaymentData();
         $data = $paymentDetails;
-        dd($data[0]);
+        dd($data);
                 $amount =new Donation();
                 $amount->email = '$data->data[customer[email]];';
                 $amount->amount = '$data->data[amount];';
