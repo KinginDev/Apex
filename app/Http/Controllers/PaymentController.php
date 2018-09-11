@@ -23,10 +23,10 @@ class PaymentController extends Controller
     public function handleGatewayCallback()
     {
         $paymentDetails = Paystack::getPaymentData();
-       
+        $data = collect($paymentDetails);
                 $amount =new Donation();
-                $amount->email = $paymentDetails->data->customer->email;
-                $amount->amount = $paymentDetails->data->amount;
+                $amount->email = $data->data->customer->email;
+                $amount->amount = $data->data->amount;
                 $amount->save();
                 Session::flash('success', 'Payment successfully made thank you for dropping by!');
                 return redirect(route('pay.view'));
