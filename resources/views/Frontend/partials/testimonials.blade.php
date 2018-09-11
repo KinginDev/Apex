@@ -81,27 +81,27 @@
                                 <div class="client-slider" data-action="clientSlider">
                                     <div class="col-sm-3">
                                         <div class="single-clients">
-                                            <img src="/img/client/bow.png" alt="Client Logo">
+                                            <img src="/img/clients/bow.png" alt="Client Logo">
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="single-clients">
-                                            <img src="/img/client/kareer.png" alt="Client Logo">
+                                            <img src="/img/clients/kareer.png" alt="Client Logo">
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="single-clients">
-                                            <img src="/img/client/soca.png" alt="Client Logo">
+                                            <img src="/img/clients/soca.png" alt="Client Logo">
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="single-clients">
-                                            <img src="/img/client/verifi.png" alt="Client Logo">
+                                            <img src="/img/clients/verifi.png" alt="Client Logo">
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="single-clients">
-                                            <img src="/img/client/wmm.png" alt="Client Logo">
+                                            <img src="/img/clients/wmm.png" alt="Client Logo">
                                         </div>
                                     </div>
 <!--
