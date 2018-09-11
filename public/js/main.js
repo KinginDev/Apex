@@ -285,17 +285,18 @@ $(document).ready(function($){
      	e.preventDefault();
 
      var $this = $(this);
-     var email = $this.find('#nl_email');
+     var email = $('#nl_email').val();
      var token = ' 5021eaabc90a7be9730cd4518f2622e7';
      var listKey = 'b01c7ceef72d47cd68fa34e0d9574bb3ab648345a53c35c2'
      e.preventDefault();
      $.ajax({
         url: "https://campaigns.zoho.com/api/addlistsubscribersinbulk?authtoken="+token+"&scope=CampaignsAPI&listkey="+listKey+"&resfmt=JSON&emailids="+ email+'"',
+        headers: {"Access-Control-Allow-Headers": "x-requested-with" },
         method: 'POST',
         type: 'json',
         success: function(response){
             swal("Thanks!", "You have been successfully added to our mailing list!", "success");
-            email.val = '';
+            email = '';
         }
     });
  })
