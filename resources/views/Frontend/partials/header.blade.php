@@ -3,8 +3,8 @@
 
             <!-- start desktop logo -->
             <a href="/" class="logos matx-logo logo-initial init-animation">
-                <img class="logo-dark" src="/img/logo/57x57.png" alt="logo">
-                <img class="logo-lite" src="/img/logo/60x76.png" alt="logo">
+                <img class="logo-dark" src="/img/logo/57x57.png" alt="apex triangle logo sm">
+                <img class="logo-lite" src="/img/logo/60x76.png" alt="apex triangle logo lg">
             </a>
             <!-- end desktop logo -->
 

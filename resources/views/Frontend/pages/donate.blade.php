@@ -33,14 +33,21 @@
                                               </div>
 
                                               @endif
-                                               <ul class="progress-bar-wrap" data-action="progress-bar">
+                                               <ul class="progress-bar-wrap" data-action="progress-bar" style="margin: 20px 0px !important;">
                                             <?php
                                                    $sum = 0;
                                                    foreach($donate as $pay){
                                                       $sum += $pay->amount;
                                                      
                                                    }
-                                                     echo $sum;
+                                                   
+                                                    function calc_per ($val1, $val2){
+                                                       $perc = $val2/$val1;
+                                                        $perc = $perc * 100;
+                                                        return $perc;
+                                                    }
+                                                  $perc = calc_per(10000,$sum);
+                                                 
                                                 ?>
                                         <!-- start skill progress bar -->
                                         <li class="narrow progress-bar-inner">
@@ -48,8 +55,8 @@
                                             <span class="progress-bar-label">Goal ($10,000)</span>
                                             <div class="progress-bar">
                                                 <!-- skill level-->
-                                                <div class="progress-bar-L1" data-width="85%">
-                                                    <div class="progress-conunt"><span>85%</span></div>
+                                                <div class="progress-bar-L1" data-width="{{$perc}}%">
+                                                    <div class="progress-conunt"><span>{{$perc}}%</span></div>
                                                 </div>
                                             </div>
                                         </li>
