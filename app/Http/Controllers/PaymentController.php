@@ -28,7 +28,7 @@ class PaymentController extends Controller
                 $amount->email = $paymentDetails->data->customer->email;
                 $amount->amount = $paymentDetails->data->amount;
                 $amount->save();
-                Session::flash('success', 'Payment successfully made thank you for dropping by!')
+                Session::flash('success', 'Payment successfully made thank you for dropping by!');
                 return redirect(route('pay.view'));
         
         // Now you have the payment details,
