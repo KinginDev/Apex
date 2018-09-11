@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Paystack;
 use App\Donation;
+use Session;
 class PaymentController extends Controller
 {
     public function view(){
