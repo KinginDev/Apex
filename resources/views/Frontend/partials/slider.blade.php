@@ -9,7 +9,7 @@
                             <li class="slider-color-schema-dark" data-index="rs-68" data-transition="zoomout" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-rotate="0"  data-saveperformance="off"  data-title="Intro" data-description="">
 
                                 <!-- MAIN IMAGE -->
-                                <img src="{{asset('/img/banner/bg-1.jpg')}}"  alt=""  data-bgposition="center bottom" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                                <img src="{{secure_asset('/img/banner/bg-1.jpg')}}"  alt=""  data-bgposition="center bottom" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
                                 <!-- LAYERS -->
 
 
@@ -102,7 +102,7 @@
                             <!-- SLIDE 2 -->
                             <li class="slider-color-schema-dark" data-index="rs-2" data-transition="fade" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-description="">
                                 <!-- MAIN IMAGE -->
-                                <img src="{{asset('/img/banner/bg-2.jpg')}}"  alt=""  data-bgposition="center bottom" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
+                                <img src="{{secure_asset('/img/banner/bg-2.jpg')}}"  alt=""  data-bgposition="center bottom" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
 
                                 <!-- LAYER NR. 1 -->
                                 <div class="tp-caption slide-2 tp-shape tp-shapewrapper tp-resizeme rs-parallaxlevel-0"
@@ -199,9 +199,9 @@
                                     data-width="['none', 'none', 'none', '0px']"
                                     style="z-index: 2; text-aligh: right;">
 
-                                    <img src="{{asset('/img/banner/bg-3.jpg')}}" alt="" width="996"
+                                    {{-- <img src="{{asset('/img/banner/bg-3.jpg')}}" alt="" width="996"
                                         data-ww="['996px','600px','600px','0px']"
-                                        data-hh="['996px','600px','600px','0px']">
+                                        data-hh="['996px','600px','600px','0px']"> --}}
                                 </div>
 
                                 <!-- LAYER NR. 6 -->
@@ -220,9 +220,9 @@
                                     data-width="['none', 'none', 'none', '0px']"
                                     style="z-index: 2; text-aligh: right;">
 
-                                    <img src="img/revslider/ps_screenshot.png" alt="" width="996"
+                                   {{--  <img src="img/revslider/ps_screenshot.png" alt="" width="996"
                                         data-ww="['996px','600px','600px','0px']"
-                                        data-hh="['996px','600px','600px','0px']">
+                                        data-hh="['996px','600px','600px','0px']"> --}}
                                 </div>
                             </li>
 
@@ -238,7 +238,7 @@
                                     data-volume="mute"
                                     data-videowidth="100%"
                                     data-videoheight="100%"
-                                    data-videomp4="video/officeloop_low.mp4"
+                                    data-videomp4="{{secure_asset('video/officeloop_low.mp4')}}"
                                     data-videopreload="preload"
                                     data-videoloop="loopandnoslidestop"
                                     data-forceCover="1"
