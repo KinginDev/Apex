@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 use Paystack;
 use App\Donation;
 use Session;
+
+
 class PaymentController extends Controller
 {
+    //use App\Controllers\Traits\Payment;
+
     public function view(){
         $donate = Donation::all();
       return view('Frontend.pages.donate')->with(compact('donate'));

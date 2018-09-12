@@ -53,7 +53,7 @@
                                         <li class="narrow progress-bar-inner">
                                             <!-- skill title -->
                                             <span class="progress-bar-label">Goal ($10,000)</span>
-                                            <div class="progress-bar">
+                                            <div class="progress-bar" style="margin: 20px 0px;">
                                                 <!-- skill level-->
                                                 <div class="progress-bar-L1" data-width="{{$perc}}%">
                                                     <div class="progress-conunt"><span>{{$perc}}%</span></div>
@@ -62,13 +62,10 @@
                                         </li>
                                         <!-- end skill progress bar -->
                                             </ul>
-                                            <form method="POST" action="{{ route('pay') }}" accept-charset="UTF-8" class="matx-form-valid contact-form" role="form">
+                                            <form method="POST" action="{{ route('pay') }}" accept-charset="UTF-8" class="matx-form-valid contact-form" role="form" id="payment_form">
                                             <div class="text-center " style="height: 300px;">
 										            <p>
-										                <div>
-										                    Apex Triangle Donation
-										                   
-										                </div>
+										                
 										            </p>
 										            <div class="mdl-textfield mdl-js-textfield">
 		                                                <input type="email" class="mdl-textfield__input" name="email" value=""> {{-- required in kobo --}}
@@ -76,8 +73,8 @@
 		                                            </div> {{-- required --}}
 										            
 										             <div class="mdl-textfield mdl-js-textfield">
-		                                                <input type="text" class="mdl-textfield__input" name="amount" value=""> {{-- required in kobo --}}
-		                                                <label class="mdl-textfield__label" for="name">Amount</label>
+		                                                <input type="text" class="mdl-textfield__input" id="amount" name="amount" value=""> {{-- required in kobo --}}
+		                                                <label class="mdl-textfield__label" for="amount" >Amount</label>
 		                                            </div>
 										           
 										            <input type="hidden" name="quantity" value="3">
@@ -106,6 +103,17 @@
                 </div>
             </section>
             <!-- end team section -->
-            
+           
 </main>
      @endsection
+
+      @section('scripts')
+        <script type="text/javascript">
+            $('#payment_form').submit(function(e){
+                e.preventDefault();
+                var amount = $(this).find('#amount').val();
+                var value = amount + '.00';
+              $('#payment_form').submit();
+            })
+        </script>
+      @endsection
