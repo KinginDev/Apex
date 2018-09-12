@@ -20,7 +20,9 @@ class HomeController extends Controller
         set_time_limit(0);
     	$blogs = Blog::with(['images','category'])->take(3)->get();
        $projects = Project::with(['images'])->take(20)->get();
-        return view('Frontend.pages.index')->with(compact(['blogs','projects']));
+       $random_number = rand(1,2);
+
+        return view('Frontend.pages.index')->with(compact(['blogs','projects', 'random_number']));
     }
 
      public function getAllPosts($value='')

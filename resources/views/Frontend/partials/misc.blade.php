@@ -15,9 +15,9 @@
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-5 col-lg-4 col-lg-offset-1 brief-half brief-content">
-                                <h2 class="section-title">If You Can Think It we Can Build it</h2>
+                                <h2 class="section-title">If you can dream it we can build it</h2>
                                 <p>Do you have your dream website or moblie app stuck in your head? Great beacuse you are the right place. </p>
-                                <p>At Apex Tiangle We help you build your dream with a little touch of Taste and Elegance. Be a part of our ever growing community of clients.</p>
+                                <p>At Apex Tiangle We help you build your dream with a little touch of <strong>Taste </strong>and <strong>Elegance </strong>. Be a part of our ever growing community of clients.</p>
                                 <a href="{{route('quote')}}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-default btn-highlight">Request For A Quote</a>
                             </div>
                         </div>

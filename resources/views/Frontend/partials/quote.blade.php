@@ -4,7 +4,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="stay-center">
-                                    <h2 class="section-title">Already fallen in Love With Our Work ? Request For a Quote!</h2>
+                                    <h2 class="section-title">Already fallen in love with our work ? Request for a quote!</h2>
                                     <div class="btn-wrap">
                                         <a href="{{route('quote')}}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-default btn-highlight wow fadeInRight" data-wow-duration="1.2s">Get Quotation</a>
                                     </div>    

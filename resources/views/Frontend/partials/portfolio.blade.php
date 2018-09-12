@@ -29,39 +29,44 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <!-- start portfolio items -->
-                                <div class="clearfix protfolio-items">
-                                    @foreach($projects as $project)
-                                    <!-- start single portfolio item with content pop-up and attachment preview -->
-                                    <div id="portfolio-01" class="col-xxs-6 col-xs-6 col-sm-4 single-portfolio {{str_replace(',', ' ',$project->tags)}}">
-                                        <div class="portfolio-item">
-                                            <a href="{{route('show.project', $project->id)}}" >
-                                                <!-- start portfolio image -->
-                                                <div class="protfolio-image">
-                                                    <?php
-                                                         $image = $project->images->first();
-                                                         //dump($image);
-                                                        ?>
-                                                    <img src="{{$image->url}}" alt="{{$image->name}}">
-                                                    
-                                                    <!-- .pf-overlay with icon display only portfolio style two -->
-                                                    <div class="pf-overlay"><i class="zmdi zmdi-center-focus-strong"></i></div>
-                                                </div>
-                                                <!-- end portfolio image -->
+                                @if(!$projects->isEmpty())
+                                    <!-- start portfolio items -->
+                                    <div class="clearfix protfolio-items">
 
-                                                <div class="portfolio-meta">
-                                                    <i class="zmdi zmdi-plus-circle"></i>
-                                                    <h3 class="portfolio-title">{{$project->client}}</h3>
+                                        @foreach($projects as $project)
+                                        <!-- start single portfolio item with content pop-up and attachment preview -->
+                                        <div id="portfolio-01" class="col-xxs-6 col-xs-6 col-sm-4 single-portfolio {{str_replace(',', ' ',$project->tags)}}">
+                                            <div class="portfolio-item">
+                                                <a href="{{route('show.project', $project->id)}}" >
+                                                    <!-- start portfolio image -->
+                                                    <div class="protfolio-image">
+                                                        <?php
+                                                             $image = $project->images->first();
+                                                             //dump($image);
+                                                            ?>
+                                                        <img src="{{$image->url}}" alt="{{$image->name}}">
+                                                        
+                                                        <!-- .pf-overlay with icon display only portfolio style two -->
+                                                        <div class="pf-overlay"><i class="zmdi zmdi-center-focus-strong"></i></div>
+                                                    </div>
+                                                    <!-- end portfolio image -->
 
-                                                    <!-- .portfolio-subtitle show only portfolio style two -->
-                                                    <div class="portfolio-subtitle">{{ (substr($project->project_info,0,20)) }} </div>
-                                                </div>
-                                                <div class="pf-overlay"></div>
-                                            </a>
+                                                    <div class="portfolio-meta">
+                                                        <i class="zmdi zmdi-plus-circle"></i>
+                                                        <h3 class="portfolio-title">{{$project->client}}</h3>
+
+                                                        <!-- .portfolio-subtitle show only portfolio style two -->
+                                                        <div class="portfolio-subtitle">{{ (substr($project->project_info,0,20)) }} </div>
+                                                    </div>
+                                                    <div class="pf-overlay"></div>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    @endforeach
-                                    <!-- end single portfolio item -->
+                                        @endforeach
+                                    @else
+
+                                     @endif
+                                        <!-- end single portfolio item -->
 
                                    
 

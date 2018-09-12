@@ -6,7 +6,11 @@
         <main class="main-wrapper" id="app">
 
             <!-- start revolution slider section-->
-           @include('Frontend.partials.slider')
+            @if($random_number == 1)
+                 @include('Frontend.partials.slider')
+            @else
+                @include('Frontend.partials.slider2')
+            @endif
 
             @include('Frontend.partials.about')
             <!-- end about section-->

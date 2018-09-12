@@ -52,7 +52,7 @@ $(document).ready(function($){
 
 		        bannerRevSlider = revSliderWrapID.show().revolution({
 		            sliderType:"standard",
-		            jsFileLocation:"assets/libs/revolution/js/",
+		            jsFileLocation:"/libs/revolution/js/",
 		            sliderLayout:"fullscreen",
 		            responsiveLevels: [1240,1024,778,485],
 		            gridwidth: [1400,1170,778,480],

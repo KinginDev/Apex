@@ -35,9 +35,9 @@
                                                         <div class="col-sm-6">
                                                             <!-- service tab title -->
                                                             <h3 class="card-title tab-title">WEB DESIGN</h3>
-                                                            <p class="columnd-text">We Design Some Of the Most User Friendly Website, Ease of use is Our Major Priority.</p>
+                                                            <p class="columnd-text">We design some of the most user friendly website, Ease of use is our major priority.</p>
 
-                                                            <p>The Art is</p>
+                                                            <p></p>
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <div class="tab-content text-center">
@@ -61,7 +61,7 @@
                                                             <h3 class="card-title tab-title">IT TRAINGING</h3>
                                                             <p class="columnd-text">It has been our passion ever since starting out as a company to impart knowledge at its most accuracy.</p>
 
-                                                            <p>We train people in areas such as web development, mobile development , cloud computing & More.</p>
+                                                            <p>We train people in areas such as web development, mobile development , cloud computing & more.</p>
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <div class="tab-content text-center">
@@ -108,7 +108,7 @@
                                                             <h3 class="card-title tab-title">HARDWARE INTEGRATION</h3>
                                                             <p class="columnd-text">Do you want to feature a hardware component i.e Retina Scanner, Finger Print Scanners, Barcode Scanners in your website or moblie App?</p>
 
-                                                            <p>At Apex Studio in Conjuction with some our Sponsors BOW DYNAMIC SYSTEMS LTD to solve of of our client request. We also integrate Security hardware i.e CCTV cameras and Acess Control Mecahnisms to Websites and Moblie apps</p>
+                                                            <p>At Apex Triangle in conjuction with some our sponsors BOW DYNAMIC SYSTEMS LTD to solve of of our client request. We also integrate Security hardware i.e CCTV cameras and access control mecahnisms to websites and moblie apps</p>
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <div class="tab-content text-center">
@@ -129,10 +129,10 @@
                                                         <div class="col-sm-6">
                                                             <!-- service tab title -->
                                                             <h3 class="card-title tab-title">CLOUD COMPUTING</h3>
-                                                            <p class="columnd-text">We are Exprienced in using the cloud for our advantage</p>
+                                                            <p class="columnd-text">We are exprienced in using the cloud for our advantage</p>
 
-                                                            <p>Our Experinece Cuts Across Helping you manage your data on the cloud or delopy your Projects to the cloud and also sclae your app accordingly . <br>
-                                                                Some Of the Platforms We've Worked with Include Services from AWS (AMAZON), GCP (GOOGLE CLOUD PLATFORM) , AZURE & Many more.
+                                                            <p>Our experinece cuts across helping you manage your data on the cloud or delopy your projects to the cloud and also sclae your app accordingly . <br>
+                                                                some Of the platforms we've Worked with include services from AWS (AMAZON), GCP (GOOGLE CLOUD PLATFORM) , AZURE & Many more.
                                                             </p>
                                                         </div>
                                                         <div class="col-sm-6">
